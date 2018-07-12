@@ -20,14 +20,14 @@ class Slide extends React.Component {
                 <div className="card-body">
                     <div className="text-center mt-4">
                         <h1 className="align-content-center font-weight-bold display-3 text-white">Sydney</h1>
-                        <p className="pt-2 text-white">Partly cloudy with possible rain</p>
+                        <p className="pt-2 text-white font-weight-bold">Sunny</p>
                     </div>
                     <div className="mt-5">
                         <img src={CloudyWhite} style={imageStyle} className="mx-auto" />
                     </div>
                     <div className="text-center mt-5">
                         <h3 className="align-content-center font-weight-bold text-white">
-                            15 &deg;C
+                            Today 15 &deg;C
                         </h3>
                     </div>
                 </div>
