@@ -1,29 +1,38 @@
 import React from "react";
-import SunRain from "../images/sun_cloud_rain.png";
+
+import Sydney from "../images/Sydney.jpg";
+import CloudyWhite from "../images/sun_white.png";
 
 class Slide extends React.Component {
 
     render() {
         const imageStyle = {
-            width: "100%"
+            width: "40%"
+        };
+
+        const cardStyle = {
+            backgroundImage: `url(${Sydney})`,
+            height: "700px"
         };
 
         return (
-            <div className="card border-0">
+            <div className="card border-0" style={cardStyle}>
                 <div className="card-body">
-                    <div className="text-center">
-                        <h1 className="align-content-center font-weight-bold display-3">Sydney</h1>
-                        <p className="pt-2">Partly cloudy with possible rain</p>
+                    <div className="text-center mt-4">
+                        <h1 className="align-content-center font-weight-bold display-3 text-white">Sydney</h1>
+                        <p className="pt-2 text-white">Partly cloudy with possible rain</p>
                     </div>
-                    <div>
-                        <img src={SunRain} style={imageStyle} />
+                    <div className="mt-5">
+                        <img src={CloudyWhite} style={imageStyle} className="mx-auto" />
                     </div>
-                    <div className="text-center">
-                        <h3 className="align-content-center font-weight-bold">15</h3>
+                    <div className="text-center mt-5">
+                        <h3 className="align-content-center font-weight-bold text-white">
+                            15 &deg;C
+                        </h3>
                     </div>
                 </div>
                 <div className="card-footer">
-                    <div className="text-center">
+                    <div className="text-center text-white">
                         Weather
                     </div>
                 </div>
