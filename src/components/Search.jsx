@@ -4,7 +4,7 @@ class Search extends React.Component {
 
     render() {
         return (
-            <div className="col-12 mt-3 mb-3">
+            <div className="col-12 mt-3 mb-3 pl-4 pr-4">
                 <form>
                     <div className="input-group">
                         <input className="form-control" type="text"/>
