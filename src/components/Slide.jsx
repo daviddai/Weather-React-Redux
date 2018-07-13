@@ -1,5 +1,6 @@
 import React from "react";
-import Slider from "react-slick";
+
+import Grid from "./Grid";
 
 import Sydney from "../images/Sydney.jpg";
 import CloudyWhite from "../images/sun_white.png";
@@ -14,15 +15,6 @@ class Slide extends React.Component {
         const cardStyle = {
             backgroundImage: `url(${Sydney})`,
             height: "700px"
-        };
-
-        const settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false
         };
 
         return (
@@ -42,12 +34,20 @@ class Slide extends React.Component {
                             </h3>
                         </div>
                     </div>
-                    <div className="card-footer">
+                    <div className="card-footer h-25 pt-3">
                         <div className="row text-white text-center">
-                            <div className="col-3">1</div>
-                            <div className="col-3">2</div>
-                            <div className="col-3">3</div>
-                            <div className="col-3">4</div>
+                            <div className="col-3">
+                                <Grid/>
+                            </div>
+                            <div className="col-3">
+                                <Grid/>
+                            </div>
+                            <div className="col-3">
+                                <Grid/>
+                            </div>
+                            <div className="col-3">
+                                <Grid/>
+                            </div>
                         </div>
                     </div>
                 </div>
