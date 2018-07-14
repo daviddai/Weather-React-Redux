@@ -1,6 +1,6 @@
 import React from "react";
 
-import Storm from "../images/storm_white.png";
+import images from "../constants/ImagesRepo";
 
 class Grid extends React.Component {
 
@@ -21,7 +21,7 @@ class Grid extends React.Component {
                         <h5>Mon</h5>
                     </div>
                     <div>
-                        <img src={Storm} style={imageStyle} />
+                        <img src={images.STORM} style={imageStyle} />
                     </div>
                     <div>
                         18 &deg;C

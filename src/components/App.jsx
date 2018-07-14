@@ -8,8 +8,13 @@ import "font-awesome/css/font-awesome.css";
 class App extends React.Component {
 
     render() {
+        const containerStyle = {
+            maxWidth: "600px",
+            maxHeight: "700px"
+        };
+
         return (
-            <div className="container">
+            <div className="container" style={containerStyle}>
                 <Search/>
                 <Carousel/>
             </div>
