@@ -13,8 +13,7 @@ class Slide extends React.Component {
         };
 
         const cardStyle = {
-            backgroundImage: `url(${Sydney})`,
-            height: "700px"
+            backgroundImage: `url(${Sydney})`
         };
 
         return (
@@ -34,7 +33,7 @@ class Slide extends React.Component {
                             </h3>
                         </div>
                     </div>
-                    <div className="card-footer h-25 pt-3">
+                    <div className="card-footer h-25 pt-3 border-top">
                         <div className="row text-white text-center">
                             <div className="col-3">
                                 <Grid/>
