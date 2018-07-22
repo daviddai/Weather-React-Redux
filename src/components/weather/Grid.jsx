@@ -1,6 +1,6 @@
 import React from "react";
 
-import images from "../constants/ImagesRepo";
+import images from "../../constants/ImagesRepo";
 
 class Grid extends React.Component {
 

@@ -2,7 +2,7 @@ import React from "react";
 
 import Grid from "./Grid";
 
-import images from "../constants/ImagesRepo";
+import images from "../../constants/ImagesRepo";
 
 class Slide extends React.Component {
 
