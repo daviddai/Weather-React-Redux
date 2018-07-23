@@ -2,6 +2,35 @@ import React from "react";
 
 class UserLogin extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            email: '',
+            password: ''
+        };
+    }
+
+    handleFieldChanged = (event) => {
+        this.setState({
+           [event.target.id]: event.target.value
+        });
+    };
+
+    login = (event) => {
+        event.preventDefault();
+
+        fetch('http://localhost:8082/user/login', {
+                  method: 'POST',
+                  body: this.state
+              })
+              .then(response => response.body)
+              .then(data => {
+                  console.log(data)})
+              .catch(error => {
+                  console.log(error)
+              });
+    };
+
     render() {
         const containerStyle = {
             maxWidth: "1000px",
@@ -21,17 +50,29 @@ class UserLogin extends React.Component {
                                     <div className="card-body">
                                         <form className="form" method="POST">
                                             <div className="form-group">
-                                                <label>Username:</label>
-                                                <input type="text" className="form-control rounded-0" />
+                                                <label>User Email:</label>
+                                                <input id="email"
+                                                       type="text"
+                                                       className="form-control rounded-0"
+                                                       onChange={this.handleFieldChanged}
+                                                />
                                             </div>
                                         </form>
-                                        <form className="form" method="POST">
+                                        <form className="form" method="POST" onSubmit={this.login}>
                                             <div className="form-group">
                                                 <label>Password:</label>
-                                                <input type="password" className="form-control rounded-0" />
+                                                <input id="password"
+                                                       type="password"
+                                                       className="form-control rounded-0"
+                                                       onChange={this.handleFieldChanged}
+                                                />
                                             </div>
+                                            <button type="submit"
+                                                    className="btn btn-success btn-lg float-right"
+                                            >
+                                                Login
+                                            </button>
                                         </form>
-                                        <button type="submit" className="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
                                     </div>
                                 </div>
                             </div>
