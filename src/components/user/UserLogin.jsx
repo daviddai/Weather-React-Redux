@@ -1,5 +1,7 @@
 import React from "react";
 
+import InputGroup from "../framework/InputGroup";
+
 class UserLogin extends React.Component {
 
     constructor() {
@@ -23,9 +25,9 @@ class UserLogin extends React.Component {
                   method: 'POST',
                   body: this.state
               })
-              .then(response => response.body)
+              .then(response => response.json())
               .then(data => {
-                  console.log(data)})
+                  console.log(data['succeed'])})
               .catch(error => {
                   console.log(error)
               });
@@ -48,25 +50,15 @@ class UserLogin extends React.Component {
                                         <h3>Sign In</h3>
                                     </div>
                                     <div className="card-body">
-                                        <form className="form" method="POST">
-                                            <div className="form-group">
-                                                <label>User Email:</label>
-                                                <input id="email"
-                                                       type="text"
-                                                       className="form-control rounded-0"
-                                                       onChange={this.handleFieldChanged}
-                                                />
-                                            </div>
-                                        </form>
                                         <form className="form" method="POST" onSubmit={this.login}>
-                                            <div className="form-group">
-                                                <label>Password:</label>
-                                                <input id="password"
-                                                       type="password"
-                                                       className="form-control rounded-0"
-                                                       onChange={this.handleFieldChanged}
-                                                />
-                                            </div>
+                                            <InputGroup id="email"
+                                                        title="Email"
+                                                        type="text"
+                                                        onChange={this.handleFieldChanged}/>
+                                            <InputGroup id="password"
+                                                        title="Password"
+                                                        type="password"
+                                                        onChange={this.handleFieldChanged}/>
                                             <button type="submit"
                                                     className="btn btn-success btn-lg float-right"
                                             >
