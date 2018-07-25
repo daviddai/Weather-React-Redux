@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
 import Weather from "./weather/Weather";
-import UserForm from "./user/UserForm";
+import UserForm from "./user/UserRegistrationForm";
 import UserLoginPane from "./user/UserLoginPane";
 
 class App extends React.Component {
