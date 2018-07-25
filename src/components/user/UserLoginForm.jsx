@@ -6,6 +6,35 @@ import InputGroup from "../framework/input/InputGroup";
 
 class UserLoginForm extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            email: '',
+            password: ''
+        };
+    }
+
+    handleFieldChanged = (event) => {
+        this.setState({
+            [event.target.id]: event.target.value
+        });
+    };
+
+    login = (event) => {
+        event.preventDefault();
+
+        fetch('http://localhost:8082/user/login', {
+            method: 'POST',
+            body: this.state
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data['succeed'])})
+            .catch(error => {
+                console.log(error)
+            });
+    };
+
     render() {
         return (
             <Form>
@@ -23,6 +52,15 @@ class UserLoginForm extends React.Component {
                                     title="Password"
                                     type="password"
                         />
+                    </FormColumn>
+                </FormRow>
+                <FormRow>
+                    <FormColumn>
+                        <button type="submit"
+                                className="btn btn-success btn-lg float-right"
+                        >
+                            Login
+                        </button>
                     </FormColumn>
                 </FormRow>
             </Form>
