@@ -10,9 +10,11 @@ class Form extends React.Component {
 
     render() {
         return (
-            <Container>
-                {this.props.children}
-            </Container>
+            <form>
+                <Container>
+                    {this.props.children}
+                </Container>
+            </form>
         );
     }
 

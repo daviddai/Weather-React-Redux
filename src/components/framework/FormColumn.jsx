@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Col } from "react-grid-system";
 
 class FormColumn extends React.Component {
 
     render() {
         return (
-            <div></div>
+            <Col>
+                {this.props.children}
+            </Col>
         );
     }
 
