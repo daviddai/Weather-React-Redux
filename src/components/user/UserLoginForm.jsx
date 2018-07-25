@@ -1,8 +1,8 @@
 import React from "react";
-import Form from "../framework/Form";
-import FormRow from "../framework/FormRow";
-import FormColumn from "../framework/FormColumn";
-import InputGroup from "../framework/InputGroup";
+import Form from "../framework/form/Form";
+import FormRow from "../framework/form/FormRow";
+import FormColumn from "../framework/form/FormColumn";
+import InputGroup from "../framework/input/InputGroup";
 
 class UserLoginForm extends React.Component {
 

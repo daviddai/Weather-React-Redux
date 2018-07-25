@@ -1,5 +1,8 @@
 import React from "react";
 import UserLoginForm from "./UserLoginForm";
+import CardBody from "../framework/card/CardBody";
+import Card from "../framework/card/Card";
+import CardHeader from "../framework/card/CardHeader";
 
 class UserLoginPane extends React.Component {
 
@@ -15,14 +18,14 @@ class UserLoginPane extends React.Component {
                     <div className="col-md-12">
                         <div className="row">
                             <div className="col-md-6 mx-auto">
-                                <div className="card rounded-0">
-                                    <div className="card-header text-center">
+                                <Card styleClasses="rounded-0">
+                                    <CardHeader styleClasses="text-center">
                                         <h3>Sign In</h3>
-                                    </div>
-                                    <div className="card-body">
+                                    </CardHeader>
+                                    <CardBody>
                                         <UserLoginForm/>
-                                    </div>
-                                </div>
+                                    </CardBody>
+                                </Card>
                             </div>
                         </div>
                     </div>

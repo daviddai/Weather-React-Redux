@@ -1,6 +1,6 @@
 import React from "react";
 
-import InputGroup from "../framework/InputGroup";
+import InputGroup from "../framework/input/InputGroup";
 
 class UserLogin extends React.Component {
 
