@@ -10,10 +10,16 @@ class Form extends React.Component {
 
     render() {
         return (
-            <Container>{this.props.children}</Container>
+            <Container>
+                {this.props.children}
+            </Container>
         );
     }
 
 }
+
+Form.propTypes = {
+    children: PropTypes.any
+};
 
 export default Form;

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class FormRow extends React.Component {
+class FormColumn extends React.Component {
 
     render() {
         return (
@@ -11,8 +11,8 @@ class FormRow extends React.Component {
 
 }
 
-FormRow.propTypes = {
+FormColumn.propTypes = {
     children: PropTypes.any
 };
 
-export default FormRow;
+export default FormColumn;
