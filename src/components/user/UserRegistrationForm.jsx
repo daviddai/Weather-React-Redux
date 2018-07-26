@@ -1,6 +1,6 @@
 import React from "react";
 
-class UserForm extends React.Component {
+class UserRegistrationForm extends React.Component {
 
     render() {
         return (
@@ -10,4 +10,4 @@ class UserForm extends React.Component {
 
 }
 
-export default UserForm;
+export default UserRegistrationForm;
