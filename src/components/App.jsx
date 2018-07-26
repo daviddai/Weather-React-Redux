@@ -6,6 +6,7 @@ import "font-awesome/css/font-awesome.css";
 import Weather from "./weather/Weather";
 import UserForm from "./user/UserRegistrationForm";
 import UserLoginPane from "./user/UserLoginPane";
+import UserRegistrationPane from "./user/UserRegistrationPane";
 
 class App extends React.Component {
 
@@ -14,7 +15,7 @@ class App extends React.Component {
             <Router>
                 <Switch>
                     <Route exact path ="/user/login" component={UserLoginPane} />
-                    <Route exact path ="/user/register" component={UserForm} />
+                    <Route exact path ="/user/register" component={UserRegistrationPane} />
                     <Route exact path="/weather" component={Weather} />
                 </Switch>
             </Router>
