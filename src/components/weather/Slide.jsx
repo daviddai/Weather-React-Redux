@@ -3,6 +3,9 @@ import React from "react";
 import Grid from "./Grid";
 
 import images from "../../constants/ImagesRepo";
+import Card from "../framework/card/Card";
+import CardFooter from "../framework/card/CardFooter";
+import CardBody from "../framework/card/CardBody";
 
 class Slide extends React.Component {
 
@@ -17,8 +20,8 @@ class Slide extends React.Component {
 
         return (
             <div className="col-12 pl-2 pr-2">
-                <div className="card border-0" style={cardStyle}>
-                    <div className="card-body">
+                <Card cardStyle="rounded-0">
+                    <CardBody>
                         <div className="text-center mt-4">
                             <h1 className="align-content-center font-weight-bold display-3 text-white">Sydney</h1>
                             <p className="pt-2 text-white font-weight-bold">Sunny</p>
@@ -31,8 +34,8 @@ class Slide extends React.Component {
                                 Today 15 &deg;C
                             </h3>
                         </div>
-                    </div>
-                    <div className="card-footer h-25 pt-2 border-top">
+                    </CardBo>
+                    <CardFooter cardFooterStyle="h-25 pt-2 border-top">
                         <div className="row text-white text-center">
                             <div className="col-3">
                                 <Grid/>
@@ -47,8 +50,8 @@ class Slide extends React.Component {
                                 <Grid/>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </CardFooter>
+                </Card>
             </div>
         );
     }
