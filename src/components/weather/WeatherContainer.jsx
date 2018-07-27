@@ -6,7 +6,7 @@ import TodaySection from "./TodaySection";
 import CardFooter from "../framework/card/CardFooter";
 import ForecastSection from "./ForecastSection";
 
-class WeatherSection extends React.Component {
+class WeatherContainer extends React.Component {
 
     render() {
         const backgroundImage = {
@@ -27,4 +27,4 @@ class WeatherSection extends React.Component {
 
 }
 
-export default WeatherSection;
+export default WeatherContainer;

@@ -2,7 +2,7 @@ import React from "react";
 import Form from "../framework/form/Form";
 import FormRow from "../framework/form/FormRow";
 import FormColumn from "../framework/form/FormColumn";
-import InputGroup from "../framework/input/InputGroup";
+import FormGroup from "../framework/form/FormGroup";
 
 class UserRegistrationForm extends React.Component {
 
@@ -11,33 +11,33 @@ class UserRegistrationForm extends React.Component {
             <Form>
                 <FormRow>
                     <FormColumn>
-                        <InputGroup id="email"
-                                    title="Email"
-                                    type="text"
+                        <FormGroup id="email"
+                                   title="Email"
+                                   type="text"
                         />
                     </FormColumn>
                 </FormRow>
                 <FormRow>
                     <FormColumn>
-                        <InputGroup id="username"
-                                    title="Username"
-                                    type="text"
+                        <FormGroup id="username"
+                                   title="Username"
+                                   type="text"
                         />
                     </FormColumn>
                 </FormRow>
                 <FormRow>
                     <FormColumn>
-                        <InputGroup id="password"
-                                    title="Password"
-                                    type="password"
+                        <FormGroup id="password"
+                                   title="Password"
+                                   type="password"
                         />
                     </FormColumn>
                 </FormRow>
                 <FormRow>
                     <FormColumn>
-                        <InputGroup id="confirmPassword"
-                                    title="Confirm Password"
-                                    type="password"
+                        <FormGroup id="confirmPassword"
+                                   title="Confirm Password"
+                                   type="password"
                         />
                     </FormColumn>
                 </FormRow>
