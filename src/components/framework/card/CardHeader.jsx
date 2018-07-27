@@ -4,7 +4,7 @@ class CardHeader extends React.Component {
 
     render() {
         return (
-            <div className={"card-header " + this.props.cardHeaderStyle}>
+            <div className={"card-header " + this.props.classNames}>
                 {this.props.children}
             </div>
         );

@@ -4,7 +4,7 @@ class Card extends React.Component {
 
     render() {
         return (
-            <div className={"card " + this.props.cardStyle}>
+            <div className={"card " + this.props.classNames} style={this.props.styles}>
                 {this.props.children}
             </div>
         );

@@ -1,10 +1,10 @@
 import React from "react";
 
-class CardBody extends React.Component {
+class Slide extends React.Component {
 
     render() {
         return (
-            <div className={"card-body " + this.props.classNames}>
+            <div className={this.props.classNames}>
                 {this.props.children}
             </div>
         );
@@ -12,4 +12,4 @@ class CardBody extends React.Component {
 
 }
 
-export default CardBody;
+export default Slide;

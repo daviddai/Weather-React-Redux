@@ -1,4 +1,5 @@
 import React from "react";
+import {Row} from "react-grid-system";
 
 class Search extends React.Component {
 

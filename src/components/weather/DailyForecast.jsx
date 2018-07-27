@@ -1,36 +1,38 @@
 import React from "react";
 
 import images from "../../constants/ImagesRepo";
+import Card from "../framework/card/Card";
+import CardBody from "../framework/card/CardBody";
 
-class Grid extends React.Component {
+class DailyForecast extends React.Component {
 
     render() {
-        const gridStyle = {
+        const backgroundColor = {
             backgroundColor: "transparent"
         };
 
-        const imageStyle = {
+        const imageSize = {
             width: "100%",
             height: "100%"
         };
 
         return (
-            <div className="card border-0" style={gridStyle}>
-                <div className="card-body text-white text-center">
+            <Card classNames="border-0" styles={backgroundColor}>
+                <CardBody classNames="text-white text-center">
                     <div>
                         <h5>Mon</h5>
                     </div>
                     <div>
-                        <img src={images.STORM} style={imageStyle} />
+                        <img src={images.STORM} style={imageSize} />
                     </div>
                     <div>
                         18 &deg;C
                     </div>
-                </div>
-            </div>
+                </CardBody>
+            </Card>
         );
     }
 
 }
 
-export default Grid;
+export default DailyForecast;

@@ -1,12 +1,13 @@
 import React from "react";
-import UserLoginForm from "./UserLoginForm";
-import CardBody from "../framework/card/CardBody";
-import Card from "../framework/card/Card";
-import CardHeader from "../framework/card/CardHeader";
+import UserRegistrationForm from "../../components/user/UserRegistrationForm";
+import Card from "../../components/framework/card/Card";
+import CardHeader from "../../components/framework/card/CardHeader";
+import CardBody from "../../components/framework/card/CardBody";
 
-class UserLoginPane extends React.Component {
+class UserRegistrationPage extends React.Component {
 
     render() {
+
         const paneStyle = {
             maxWidth: "1000px",
             maxHeight: "700px"
@@ -18,12 +19,12 @@ class UserLoginPane extends React.Component {
                     <div className="col-md-12">
                         <div className="row">
                             <div className="col-md-6 mx-auto">
-                                <Card cardStyle="rounded-0">
-                                    <CardHeader cardHeaderStyle="text-center">
-                                        <h3>Sign In</h3>
+                                <Card classNames="rounded-0">
+                                    <CardHeader classNames="text-center">
+                                        <h3>Sign Up</h3>
                                     </CardHeader>
                                     <CardBody>
-                                        <UserLoginForm/>
+                                        <UserRegistrationForm/>
                                     </CardBody>
                                 </Card>
                             </div>
@@ -36,4 +37,4 @@ class UserLoginPane extends React.Component {
 
 }
 
-export default UserLoginPane;
+export default UserRegistrationPage;

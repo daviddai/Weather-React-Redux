@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
-import Weather from "./weather/Weather";
-import UserForm from "./user/UserRegistrationForm";
-import UserLoginPane from "./user/UserLoginPane";
-import UserRegistrationPane from "./user/UserRegistrationPane";
+import UserLoginPane from "../containers/user/UserLoginPage";
+import UserRegistrationPane from "../containers/user/UserRegistrationPage";
+import WeatherPage from "../containers/weather/WeatherPage";
 
 class App extends React.Component {
 
@@ -16,7 +15,7 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path ="/user/login" component={UserLoginPane} />
                     <Route exact path ="/user/register" component={UserRegistrationPane} />
-                    <Route exact path="/weather" component={Weather} />
+                    <Route exact path="/weather" component={WeatherPage} />
                 </Switch>
             </Router>
         );
