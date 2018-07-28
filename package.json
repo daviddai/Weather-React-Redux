@@ -17,7 +17,6 @@
     "node-sass": "^4.9.2",
     "path": "^0.12.7",
     "prop-types": "^15.6.2",
-    "react-alert": "^4.0.4",
     "react-burger-menu": "^2.5.2",
     "react-fontawesome": "^1.6.1",
     "react-slick": "^0.23.1",
