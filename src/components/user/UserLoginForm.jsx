@@ -42,6 +42,15 @@ class UserLoginForm extends React.Component {
             <Form submitForm={this.loginUser}>
                 <FormRow>
                     <FormColumn>
+                        <div className="pb-3">
+                            <ul className="pl-3 text-danger">
+                                <li>Incorrect username or password</li>
+                            </ul>
+                        </div>
+                    </FormColumn>
+                </FormRow>
+                <FormRow>
+                    <FormColumn>
                         <FormGroup id="email"
                                    title="Email"
                                    type="text"
