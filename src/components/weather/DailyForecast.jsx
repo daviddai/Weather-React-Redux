@@ -20,7 +20,7 @@ class DailyForecast extends React.Component {
             <Card classNames="border-0" styles={backgroundColor}>
                 <CardBody classNames="text-white text-center">
                     <div>
-                        <h5>Mon</h5>
+                        <h6>Mon</h6>
                     </div>
                     <div>
                         <img src={images.STORM} style={imageSize} />

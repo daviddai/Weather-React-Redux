@@ -10,7 +10,7 @@ class Form extends React.Component {
 
     render() {
         return (
-            <form>
+            <form onSubmit={this.props.submitForm}>
                 <Container>
                     {this.props.children}
                 </Container>

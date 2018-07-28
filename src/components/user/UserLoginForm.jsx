@@ -3,6 +3,7 @@ import Form from "../framework/form/Form";
 import FormRow from "../framework/form/FormRow";
 import FormColumn from "../framework/form/FormColumn";
 import FormGroup from "../framework/form/FormGroup";
+import axios from "axios";
 
 class UserLoginForm extends React.Component {
 
@@ -14,35 +15,37 @@ class UserLoginForm extends React.Component {
         };
     }
 
-    handleFieldChanged = (event) => {
+    updateLoginData = (event) => {
         this.setState({
             [event.target.id]: event.target.value
         });
     };
 
-    login = (event) => {
+    loginUser = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:8082/user/login', {
-            method: 'POST',
-            body: this.state
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data['succeed'])})
-            .catch(error => {
-                console.log(error)
-            });
+        axios.post('http://localhost:8082/user/login', this.state)
+             .then(response => {
+                 console.log(response.data)
+             })
+             .catch(error => {
+                 const errorStatus = error.response.status;
+
+                 if (errorStatus === 401) {
+                     console.log("Failed to authenticate");
+                 }
+             });
     };
 
     render() {
         return (
-            <Form>
+            <Form submitForm={this.loginUser}>
                 <FormRow>
                     <FormColumn>
                         <FormGroup id="email"
                                    title="Email"
                                    type="text"
+                                   onChange={this.updateLoginData}
                         />
                     </FormColumn>
                 </FormRow>
@@ -51,6 +54,7 @@ class UserLoginForm extends React.Component {
                         <FormGroup id="password"
                                    title="Password"
                                    type="password"
+                                   onChange={this.updateLoginData}
                         />
                     </FormColumn>
                 </FormRow>
