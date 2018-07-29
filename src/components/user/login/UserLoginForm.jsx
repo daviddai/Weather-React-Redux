@@ -12,29 +12,44 @@ class UserLoginForm extends React.Component {
     constructor() {
         super();
         this.state = {
-            email: '',
-            password: ''
+            user: {
+                email: '',
+                password: ''
+            },
+            messages: []
         };
     }
 
     updateLoginData = (event) => {
+        let user = this.state.user;
+        user[event.target.id] = event.target.value;
         this.setState({
-            [event.target.id]: event.target.value
+            'user': user
         });
     };
 
     loginUser = (event) => {
         event.preventDefault();
 
-        axios.post('http://localhost:8082/user/login', this.state)
+        axios.post('http://localhost:8082/user/login', this.state.user)
              .then(response => {
                  console.log(response.data)
+
+                 this.setState({
+                     messages: []
+                 })
              })
              .catch(error => {
                  const errorStatus = error.response.status;
 
                  if (errorStatus === 401) {
                      console.log("Failed to authenticate");
+
+                     console.log(error.response.data['message']);
+
+                     this.setState({
+                         messages: [error.response.data]
+                     })
                  }
              });
     };
@@ -42,14 +57,17 @@ class UserLoginForm extends React.Component {
     render() {
         return (
             <Form submitForm={this.loginUser}>
-                <FormRow classNames="mb-4">
-                    <FormColumn>
-                        <ErrorBox message="Sorry, email or password is incorrect"
-                                  classNames="rounded py-3 text-white message-box"
-                                  iconClassNames="fa fa-times-circle mx-2"
-                        />
-                    </FormColumn>
-                </FormRow>
+                { this.state.messages.length > 0 ?
+                    <FormRow classNames="mb-4">
+                        <FormColumn>
+                            <ErrorBox message="Sorry, email or password is incorrect"
+                                      classNames="rounded py-3 text-white message-box"
+                                      iconClassNames="fa fa-times-circle mx-2"
+                            />
+                        </FormColumn>
+                    </FormRow> : null
+                }
+
                 <FormRow>
                     <FormColumn>
                         <FormGroup id="email"
