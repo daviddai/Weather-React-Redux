@@ -16,7 +16,7 @@ class UserLoginForm extends React.Component {
                 email: '',
                 password: ''
             },
-            messages: []
+            apiResponses: []
         };
     }
 
@@ -36,19 +36,15 @@ class UserLoginForm extends React.Component {
                  console.log(response.data)
 
                  this.setState({
-                     messages: []
+                     apiResponses: []
                  })
              })
              .catch(error => {
                  const errorStatus = error.response.status;
 
                  if (errorStatus === 401) {
-                     console.log("Failed to authenticate");
-
-                     console.log(error.response.data['message']);
-
                      this.setState({
-                         messages: [error.response.data]
+                         apiResponses: [error.response.data]
                      })
                  }
              });
@@ -57,7 +53,7 @@ class UserLoginForm extends React.Component {
     render() {
         return (
             <Form submitForm={this.loginUser}>
-                { this.state.messages.length > 0 ?
+                { this.state.apiResponses.length > 0 ?
                     <FormRow classNames="mb-4">
                         <FormColumn>
                             <ErrorBox message="Sorry, email or password is incorrect"
