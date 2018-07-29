@@ -1,5 +1,5 @@
 import React from "react";
-import UserRegistrationForm from "../../components/user/UserRegistrationForm";
+import UserRegistrationForm from "../../components/user/registration/UserRegistrationForm";
 import Card from "../../components/framework/card/Card";
 import CardHeader from "../../components/framework/card/CardHeader";
 import CardBody from "../../components/framework/card/CardBody";

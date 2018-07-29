@@ -6,7 +6,7 @@ class FormRow extends React.Component {
 
     render() {
         return (
-            <Row>
+            <Row className={this.props.classNames}>
                 {this.props.children}
             </Row>
         );

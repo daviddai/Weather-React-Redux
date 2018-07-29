@@ -1,9 +1,11 @@
 import React from "react";
-import Form from "../framework/form/Form";
-import FormRow from "../framework/form/FormRow";
-import FormColumn from "../framework/form/FormColumn";
-import FormGroup from "../framework/form/FormGroup";
+import Form from "../../framework/form/Form";
+import FormRow from "../../framework/form/FormRow";
+import FormColumn from "../../framework/form/FormColumn";
+import FormGroup from "../../framework/form/FormGroup";
 import axios from "axios";
+import ErrorBox from "../../framework/utils/MessageBox";
+import "./user-login.css";
 
 class UserLoginForm extends React.Component {
 
@@ -40,13 +42,12 @@ class UserLoginForm extends React.Component {
     render() {
         return (
             <Form submitForm={this.loginUser}>
-                <FormRow>
+                <FormRow classNames="mb-4">
                     <FormColumn>
-                        <div className="pb-3">
-                            <ul className="pl-3 text-danger">
-                                <li>Incorrect username or password</li>
-                            </ul>
-                        </div>
+                        <ErrorBox message="Sorry, email or password is incorrect"
+                                  classNames="rounded py-3 text-white message-box"
+                                  iconClassNames="fa fa-times-circle mx-2"
+                        />
                     </FormColumn>
                 </FormRow>
                 <FormRow>

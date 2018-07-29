@@ -1,8 +1,8 @@
 import React from "react";
-import Form from "../framework/form/Form";
-import FormRow from "../framework/form/FormRow";
-import FormColumn from "../framework/form/FormColumn";
-import FormGroup from "../framework/form/FormGroup";
+import Form from "../../framework/form/Form";
+import FormRow from "../../framework/form/FormRow";
+import FormColumn from "../../framework/form/FormColumn";
+import FormGroup from "../../framework/form/FormGroup";
 
 class UserRegistrationForm extends React.Component {
 
