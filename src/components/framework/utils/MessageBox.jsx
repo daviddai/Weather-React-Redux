@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class MessageBox extends React.Component {
 
     render() {
         return (
-            <div className={this.props.classNames} style={this.props.backgroundColor}>
+            <div className={this.props.classNames}>
                 <span className={this.props.iconClassNames} />
                 {this.props.message}
             </div>
@@ -12,5 +13,11 @@ class MessageBox extends React.Component {
     }
 
 }
+
+MessageBox.propTypes = {
+    classNames: PropTypes.string,
+    iconClassNames: PropTypes.string,
+    message: PropTypes.string
+};
 
 export default MessageBox;

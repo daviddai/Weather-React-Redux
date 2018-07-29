@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class Slide extends React.Component {
 
@@ -11,5 +12,10 @@ class Slide extends React.Component {
     }
 
 }
+
+Slide.propTypes = {
+    classNames: PropTypes.string,
+    children: PropTypes.any
+};
 
 export default Slide;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class InputGroup extends React.Component {
 
@@ -16,5 +17,10 @@ class InputGroup extends React.Component {
     }
 
 }
+
+InputGroup.propTypes = {
+    btnClassNames: PropTypes.string,
+    spanClassNames: PropTypes.string
+};
 
 export default InputGroup;

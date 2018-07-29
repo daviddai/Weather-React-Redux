@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class CardHeader extends React.Component {
 
@@ -11,5 +12,10 @@ class CardHeader extends React.Component {
     }
 
 }
+
+CardHeader.propTypes = {
+    classNames: PropTypes.string,
+    children: PropTypes.any
+};
 
 export default CardHeader;

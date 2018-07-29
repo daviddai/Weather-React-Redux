@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class Card extends React.Component {
 
@@ -10,6 +11,12 @@ class Card extends React.Component {
         );
     }
 
+}
+
+Card.propTypes = {
+    classNames: PropTypes.string,
+    styles: PropTypes.string,
+    children: PropTypes.any
 }
 
 export default Card;

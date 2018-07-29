@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class CardBody extends React.Component {
 
@@ -10,6 +11,11 @@ class CardBody extends React.Component {
         );
     }
 
+}
+
+CardBody.propTypes = {
+    classNames: PropTypes.string,
+    children: PropTypes.any
 }
 
 export default CardBody;
