@@ -18,10 +18,14 @@ class UserLoginForm extends React.Component {
             },
             statuses: {
                 email: {
-
+                    touched: false,
+                    valid: false,
+                    errorMessage: ''
                 },
                 password: {
-
+                    touched: false,
+                    valid: false,
+                    errorMessage: ''
                 }
             },
             apiResponses: []
