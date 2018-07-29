@@ -16,6 +16,14 @@ class UserLoginForm extends React.Component {
                 email: '',
                 password: ''
             },
+            statuses: {
+                email: {
+
+                },
+                password: {
+
+                }
+            },
             apiResponses: []
         };
     }
@@ -86,6 +94,7 @@ class UserLoginForm extends React.Component {
                     <FormColumn>
                         <button type="submit"
                                 className="btn btn-success btn-lg float-right"
+                                disabled="true"
                         >
                             Login
                         </button>
