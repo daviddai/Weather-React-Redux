@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ErrorField from "./ErrorField";
 
 class FormGroup extends React.Component {
 
@@ -12,6 +13,9 @@ class FormGroup extends React.Component {
                        className="form-control rounded-0"
                        onChange={this.props.onChange}
                 />
+                <ErrorField classNames="text-muted"
+                            iconClassNames="fa fa-times-circle mr-1"
+                            errorMessage={this.props.errorMessage}/>
             </div>
         );
     }
