@@ -45,14 +45,8 @@ class UserLoginForm extends React.Component {
         let state = this.state;
         state.user[event.target.id] = event.target.value;
         state.statuses[event.target.id].touched = true;
-
-        if (!this.userLoginFormValidator[event.target.id](event.target.value)) {
-            state.statuses[event.target.id].valid = false;
-        } else {
-            state.statuses[event.target.id].valid = true;
-        }
-
-
+        state.statuses[event.target.id].valid = this.userLoginFormValidator[event.target.id](event.target.value);
+        state.canSubmit = Object.keys(state.statuses).every(key => state.statuses[key].valid);
         this.setState(state);
     };
 
@@ -118,7 +112,7 @@ class UserLoginForm extends React.Component {
                     <FormColumn>
                         <button type="submit"
                                 className="btn btn-success btn-lg float-right"
-                                disabled="true"
+                                disabled={!this.state.canSubmit}
                         >
                             Login
                         </button>
