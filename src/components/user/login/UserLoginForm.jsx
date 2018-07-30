@@ -5,12 +5,20 @@ import FormColumn from "../../framework/form/FormColumn";
 import FormGroup from "../../framework/form/FormGroup";
 import axios from "axios";
 import ErrorBox from "../../framework/utils/MessageBox";
+import * as validators from "../../framework/form/validator/InputValidator";
+
 import "./user-login.css";
 
 class UserLoginForm extends React.Component {
 
     constructor() {
         super();
+
+        this.userLoginFormValidator = {
+            "email": validators.validateEmail,
+            "password": validators.validateMandatory
+        };
+
         this.state = {
             user: {
                 email: '',
@@ -20,24 +28,32 @@ class UserLoginForm extends React.Component {
                 email: {
                     touched: false,
                     valid: false,
-                    errorMessage: ''
+                    errorMessage: 'Incorrect email format'
                 },
                 password: {
                     touched: false,
                     valid: false,
-                    errorMessage: ''
+                    errorMessage: 'Password cannot be empty'
                 }
             },
-            apiResponses: []
+            apiResponses: [],
+            canSubmit: false
         };
     }
 
-    updateLoginData = (event) => {
-        let user = this.state.user;
-        user[event.target.id] = event.target.value;
-        this.setState({
-            'user': user
-        });
+    updateAndValidateLoginData = (event) => {
+        let state = this.state;
+        state.user[event.target.id] = event.target.value;
+        state.statuses[event.target.id].touched = true;
+
+        if (!this.userLoginFormValidator[event.target.id](event.target.value)) {
+            state.statuses[event.target.id].valid = false;
+        } else {
+            state.statuses[event.target.id].valid = true;
+        }
+
+
+        this.setState(state);
     };
 
     loginUser = (event) => {
@@ -45,7 +61,7 @@ class UserLoginForm extends React.Component {
 
         axios.post('http://localhost:8082/user/login', this.state.user)
              .then(response => {
-                 console.log(response.data)
+                 console.log(response.data);
 
                  this.setState({
                      apiResponses: []
@@ -81,7 +97,9 @@ class UserLoginForm extends React.Component {
                         <FormGroup id="email"
                                    title="Email"
                                    type="text"
-                                   onChange={this.updateLoginData}
+                                   hasError={this.state.statuses.email.touched && !this.state.statuses.email.valid}
+                                   errorMessage={this.state.statuses.email.errorMessage}
+                                   onChange={this.updateAndValidateLoginData}
                         />
                     </FormColumn>
                 </FormRow>
@@ -90,7 +108,9 @@ class UserLoginForm extends React.Component {
                         <FormGroup id="password"
                                    title="Password"
                                    type="password"
-                                   onChange={this.updateLoginData}
+                                   hasError={this.state.statuses.password.touched && !this.state.statuses.password.valid}
+                                   errorMessage={this.state.statuses.password.errorMessage}
+                                   onChange={this.updateAndValidateLoginData}
                         />
                     </FormColumn>
                 </FormRow>

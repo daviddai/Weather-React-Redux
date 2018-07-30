@@ -1,3 +1,7 @@
+export const validateMandatory = (value) => {
+    return value !== '';
+};
+
 export const validateDigits = (digits) => {
     return new RegExp(/^\d+$/).test(digits);
 };

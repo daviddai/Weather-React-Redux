@@ -13,9 +13,13 @@ class FormGroup extends React.Component {
                        className="form-control rounded-0"
                        onChange={this.props.onChange}
                 />
-                <ErrorField classNames="text-muted"
-                            iconClassNames="fa fa-times-circle mr-1"
-                            errorMessage={this.props.errorMessage}/>
+                {
+                    this.props.hasError ?
+                        <ErrorField classNames="text-muted mt-1"
+                                    iconClassNames="fa fa-times-circle mr-1"
+                                    errorMessage={this.props.errorMessage}/>
+                        : null
+                }
             </div>
         );
     }
