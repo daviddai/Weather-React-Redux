@@ -1,13 +1,16 @@
 import React from "react";
+import Fragment from "react";
 import Form from "../../framework/form/Form";
 import FormRow from "../../framework/form/FormRow";
 import FormColumn from "../../framework/form/FormColumn";
 import FormGroup from "../../framework/form/FormGroup";
 import axios from "axios";
-import ErrorBox from "../../framework/utils/MessageBox";
+import MessageBox from "../../framework/utils/MessageBox";
 import * as validators from "../../framework/form/validator/InputValidator";
+import {Spinner, TimesCircle} from "../../framework/icon/Icon";
 
 import "./user-login.css";
+import {Message} from "../../framework/utils/Message";
 
 class UserLoginForm extends React.Component {
 
@@ -36,8 +39,9 @@ class UserLoginForm extends React.Component {
                     errorMessage: 'Password cannot be empty'
                 }
             },
-            apiResponses: [],
-            canSubmit: false
+            apiResponses: '',
+            canSubmit: false,
+            inProgress: false
         };
     }
 
@@ -52,13 +56,15 @@ class UserLoginForm extends React.Component {
 
     loginUser = (event) => {
         event.preventDefault();
+        this.setState({inProgress: true});
 
         axios.post('http://localhost:8082/user/login', this.state.user)
              .then(response => {
                  console.log(response.data);
 
                  this.setState({
-                     apiResponses: []
+                     apiResponses: '',
+                     inProgress: false
                  })
              })
              .catch(error => {
@@ -66,7 +72,8 @@ class UserLoginForm extends React.Component {
 
                  if (errorStatus === 401) {
                      this.setState({
-                         apiResponses: [error.response.data]
+                         apiResponses: error.response.data,
+                         inProgress: false
                      })
                  }
              });
@@ -75,13 +82,13 @@ class UserLoginForm extends React.Component {
     render() {
         return (
             <Form submitForm={this.loginUser}>
-                { this.state.apiResponses.length > 0 ?
+                { this.state.apiResponses !== '' ?
                     <FormRow classNames="mb-4">
                         <FormColumn>
-                            <ErrorBox message="Sorry, email or password is incorrect"
-                                      classNames="rounded py-3 text-white message-box"
-                                      iconClassNames="fa fa-times-circle mx-2"
-                            />
+                            <MessageBox classNames="rounded py-3 text-white message-box">
+                                <TimesCircle classNames="mx-2"/>
+                                <Message message={this.state.apiResponses}/>
+                            </MessageBox>
                         </FormColumn>
                     </FormRow> : null
                 }
@@ -114,6 +121,10 @@ class UserLoginForm extends React.Component {
                                 className="btn btn-success btn-lg float-right"
                                 disabled={!this.state.canSubmit}
                         >
+                            {
+                                this.state.inProgress ?
+                                    <Spinner classNames="mr-2"/> : null
+                            }
                             Login
                         </button>
                     </FormColumn>

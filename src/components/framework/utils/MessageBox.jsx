@@ -4,10 +4,14 @@ import PropTypes from "prop-types";
 class MessageBox extends React.Component {
 
     render() {
+        console.log(this.props.children);
         return (
             <div className={this.props.classNames}>
-                <span className={this.props.iconClassNames} />
-                {this.props.message}
+                {
+                    React.Children.forEach(this.props.children, child => {
+                        return child;
+                    })
+                }
             </div>
         );
     }
@@ -16,8 +20,7 @@ class MessageBox extends React.Component {
 
 MessageBox.propTypes = {
     classNames: PropTypes.string,
-    iconClassNames: PropTypes.string,
-    message: PropTypes.string
+    children: PropTypes.array
 };
 
 export default MessageBox;
