@@ -1,10 +1,10 @@
 import React from "react";
-import Form from "../../framework/form/Form";
-import FormRow from "../../framework/form/FormRow";
-import FormColumn from "../../framework/form/FormColumn";
-import FormGroup from "../../framework/form/FormGroup";
+import {Form} from "../../framework/form/Form";
+import {FormRow} from "../../framework/form/FormRow";
+import {FormColumn} from "../../framework/form/FormColumn";
+import {FormGroup} from "../../framework/form/FormGroup";
 import axios from "axios";
-import MessageBox from "../../framework/utils/MessageBox";
+import {MessageBox} from "../../framework/utils/MessageBox";
 import * as validators from "../../framework/form/validator/InputValidator";
 import {Spinner, TimesCircle} from "../../framework/icon/Icon";
 

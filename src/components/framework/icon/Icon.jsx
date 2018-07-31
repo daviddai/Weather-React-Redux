@@ -1,14 +1,10 @@
 import React from "react";
 
-class Icon extends React.Component {
-
-    render() {
-        return (
-            <i className={this.props.classNames} />
-        );
-    }
-
-}
+const Icon = (props) => {
+    return (
+        <i className={props.classNames} />
+    );
+};
 
 export const Spinner = (props) => {
     return <Icon classNames={"fa fa-spinner fa-spin fa-fw " + props.classNames} />;
