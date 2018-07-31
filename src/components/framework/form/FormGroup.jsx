@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ErrorField from "./ErrorField";
+import {ValidationTip} from "./validator/ValidationTip";
 
 class FormGroup extends React.Component {
 
@@ -15,9 +15,7 @@ class FormGroup extends React.Component {
                 />
                 {
                     this.props.hasError ?
-                        <ErrorField classNames="text-muted mt-1"
-                                    iconClassNames="fa fa-times-circle mr-1"
-                                    errorMessage={this.props.errorMessage}/>
+                        <ValidationTip classNames="mt-1 text-muted " message={this.props.errorMessage} />
                         : null
                 }
             </div>

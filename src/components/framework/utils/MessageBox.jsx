@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {Container} from "../layout/Container";
 
 class MessageBox extends React.Component {
 
@@ -9,9 +10,9 @@ class MessageBox extends React.Component {
 
     render() {
         return (
-            <div className={this.props.classNames}>
+            <Container classNames={this.props.classNames}>
                 {this.props.children}
-            </div>
+            </Container>
         );
     }
 
