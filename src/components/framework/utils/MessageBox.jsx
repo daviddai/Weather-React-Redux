@@ -19,7 +19,7 @@ class MessageBox extends React.Component {
 
 MessageBox.propTypes = {
     classNames: PropTypes.string,
-    children: PropTypes.array
+    children: PropTypes.any
 };
 
 export default MessageBox;

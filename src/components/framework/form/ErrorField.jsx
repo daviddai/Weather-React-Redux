@@ -1,6 +1,7 @@
 import React from "react";
 
 import PropTypes from "prop-types";
+import {Message} from "../utils/Message";
 
 class ErrorField extends React.Component {
 
@@ -8,7 +9,7 @@ class ErrorField extends React.Component {
         return (
             <div className={this.props.classNames}>
                 <span className={this.props.iconClassNames}/>
-                {this.props.errorMessage}
+                <Message message={this.props.errorMessage}/>
             </div>
         );
     }
