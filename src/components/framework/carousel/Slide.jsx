@@ -1,17 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {Container} from "../layout/Container";
 
-class Slide extends React.Component {
-
-    render() {
-        return (
-            <div className={this.props.classNames}>
-                {this.props.children}
-            </div>
-        );
-    }
-
-}
+export const Slide = (props) => {
+    return (
+        <Container classNames={props.classNames}>
+            {props.children}
+        </Container>
+    );
+};
 
 Slide.propTypes = {
     classNames: PropTypes.string,

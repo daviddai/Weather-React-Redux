@@ -1,22 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {Container} from "../layout/Container";
 
-class Card extends React.Component {
-
-    render() {
-        return (
-            <div className={"card " + this.props.classNames} style={this.props.styles}>
-                {this.props.children}
-            </div>
-        );
-    }
-
-}
+export const Card = (props) => {
+    return (
+        <Container classNames={"card " + props.classNames} styles={props.styles}>
+            {props.children}
+        </Container>
+    );
+};
 
 Card.propTypes = {
     classNames: PropTypes.string,
-    styles: PropTypes.string,
+    styles: PropTypes.object,
     children: PropTypes.any
-}
+};
 
 export default Card;
