@@ -1,5 +1,4 @@
 import React from "react";
-import Fragment from "react";
 import Form from "../../framework/form/Form";
 import FormRow from "../../framework/form/FormRow";
 import FormColumn from "../../framework/form/FormColumn";
@@ -58,7 +57,7 @@ class UserLoginForm extends React.Component {
         event.preventDefault();
         this.setState({inProgress: true});
 
-        axios.post('http://localhost:8082/user/login', this.state.user)
+        axios.post('http://localhost:8082/user/login', this.state.user, {timeout: 1000})
              .then(response => {
                  console.log(response.data);
 
@@ -68,13 +67,20 @@ class UserLoginForm extends React.Component {
                  })
              })
              .catch(error => {
-                 const errorStatus = error.response.status;
+                 if (error.response !== undefined) {
+                     const errorStatus = error.response.status;
 
-                 if (errorStatus === 401) {
+                     if (errorStatus === 401) {
+                         this.setState({
+                             apiResponses: error.response.data,
+                             inProgress: false
+                         });
+                     }
+                 } else {
                      this.setState({
-                         apiResponses: error.response.data,
+                         apiResponses: 'Network Error',
                          inProgress: false
-                     })
+                     });
                  }
              });
     };

@@ -3,15 +3,14 @@ import PropTypes from "prop-types";
 
 class MessageBox extends React.Component {
 
+    constructor(props) {
+        super(props)
+    }
+
     render() {
-        console.log(this.props.children);
         return (
             <div className={this.props.classNames}>
-                {
-                    React.Children.forEach(this.props.children, child => {
-                        return child;
-                    })
-                }
+                {this.props.children}
             </div>
         );
     }
