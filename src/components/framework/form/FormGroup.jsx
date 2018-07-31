@@ -29,7 +29,8 @@ FormGroup.propTypes = {
     title: PropTypes.string,
     type: PropTypes.string,
     onChange: PropTypes.func,
-    hasError: PropTypes.bool
+    hasError: PropTypes.bool,
+    errorMessage: PropTypes.string
 };
 
 export default FormGroup;
