@@ -57,7 +57,7 @@ class UserLoginForm extends React.Component {
         event.preventDefault();
         this.setState({inProgress: true});
 
-        axios.post('http://localhost:8082/user/login', this.state.user, {timeout: 1000})
+        axios.post('http://localhost:8082/user/login', this.state.user)
              .then(response => {
                  console.log(response.data);
 
