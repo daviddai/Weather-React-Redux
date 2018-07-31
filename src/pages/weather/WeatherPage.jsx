@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "../../components/framework/carousel/Carousel";
+import {Carousel} from "../../components/framework/carousel/Carousel";
 import Slide from "../../components/framework/carousel/Slide";
 import WeatherContainer from "../../components/weather/WeatherContainer";
 import AreaSearch from "../../components/weather/AreaSearchForm";
