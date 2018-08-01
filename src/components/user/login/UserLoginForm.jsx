@@ -6,7 +6,7 @@ import {FormGroup} from "../../framework/form/FormGroup";
 import axios from "axios";
 import {MessageBox} from "../../framework/utils/MessageBox";
 import * as validators from "../../framework/form/validator/InputValidator";
-import {Spinner, TimesCircle} from "../../framework/icon/Icon";
+import {SpinnerIcon, TimesCircleIcon} from "../../framework/icon/Icon";
 
 import "./user-login.css";
 import {Message} from "../../framework/utils/Message";
@@ -92,7 +92,7 @@ class UserLoginForm extends React.Component {
                     <FormRow classNames="mb-4">
                         <FormColumn>
                             <MessageBox classNames="rounded py-3 text-white message-box">
-                                <TimesCircle classNames="mx-2"/>
+                                <TimesCircleIcon classNames="mx-2"/>
                                 <Message message={this.state.apiResponses}/>
                             </MessageBox>
                         </FormColumn>
@@ -129,7 +129,7 @@ class UserLoginForm extends React.Component {
                         >
                             {
                                 this.state.inProgress ?
-                                    <Spinner classNames="mr-2"/> : null
+                                    <SpinnerIcon classNames="mr-2"/> : null
                             }
                             Login
                         </button>

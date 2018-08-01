@@ -1,16 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {Container} from "../layout/Container";
+import {Input} from "./Input";
+import {SearchIcon} from "../icon/Icon";
 
 export const InputGroup = (props) => {
     return (
-        <div className="input-group">
-            <input className="form-control" type="text" />
+        <Container classNames="input-group">
+            <Input id=""
+                   classNames="form-control"
+                   type="text" />
             <div className="input-group-append">
                 <button className={props.btnClassNames}>
-                    <span className={props.spanClassNames} />
+                    <SearchIcon/>
                 </button>
             </div>
-        </div>
+        </Container>
     );
 };
 
