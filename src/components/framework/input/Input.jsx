@@ -2,10 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const Input = (props) => {
+    const {
+        classNames,
+        ...otherProps
+    } = props;
+
     return (
-        <input id={props.id}
-               type={props.type}
-               className={props.classNames}/>
+        <input className={classNames} {...otherProps} />
     );
 };
 
