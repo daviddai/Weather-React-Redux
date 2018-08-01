@@ -89,10 +89,10 @@ class UserLoginForm extends React.Component {
         return (
             <Form submitForm={this.loginUser}>
                 { this.state.apiResponses !== '' ?
-                    <FormRow classNames="mb-4">
+                    <FormRow className="mb-4">
                         <FormColumn>
-                            <MessageBox classNames="rounded py-3 text-white message-box">
-                                <TimesCircleIcon classNames="mx-2"/>
+                            <MessageBox className="rounded py-3 text-white message-box">
+                                <TimesCircleIcon className="mx-2"/>
                                 <Message message={this.state.apiResponses}/>
                             </MessageBox>
                         </FormColumn>
@@ -129,7 +129,7 @@ class UserLoginForm extends React.Component {
                         >
                             {
                                 this.state.inProgress ?
-                                    <SpinnerIcon classNames="mr-2"/> : null
+                                    <SpinnerIcon className="mr-2"/> : null
                             }
                             Login
                         </button>

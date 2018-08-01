@@ -5,7 +5,7 @@ class CardHeader extends React.Component {
 
     render() {
         return (
-            <div className={"card-header " + this.props.classNames}>
+            <div className={"card-header " + this.props.className}>
                 {this.props.children}
             </div>
         );
@@ -14,7 +14,7 @@ class CardHeader extends React.Component {
 }
 
 CardHeader.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     children: PropTypes.any
 };
 

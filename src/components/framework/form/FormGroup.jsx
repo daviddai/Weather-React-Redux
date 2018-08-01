@@ -13,7 +13,7 @@ export const FormGroup = (props) => {
             />
             {
                 props.hasError ?
-                    <ValidationTip classNames="mt-1 text-muted " message={props.errorMessage} />
+                    <ValidationTip className="mt-1 text-muted " message={props.errorMessage} />
                     : null
             }
         </div>

@@ -6,12 +6,12 @@ import {SearchIcon} from "../icon/Icon";
 
 export const InputGroup = (props) => {
     return (
-        <Container classNames="input-group">
+        <Container className="input-group">
             <Input id=""
-                   classNames="form-control"
+                   className="form-control"
                    type="text" />
             <div className="input-group-append">
-                <button className={props.btnClassNames}>
+                <button className={props.btnclassName}>
                     <SearchIcon/>
                 </button>
             </div>
@@ -20,6 +20,6 @@ export const InputGroup = (props) => {
 };
 
 InputGroup.propTypes = {
-    btnClassNames: PropTypes.string,
-    spanClassNames: PropTypes.string
+    btnclassName: PropTypes.string,
+    spanclassName: PropTypes.string
 };

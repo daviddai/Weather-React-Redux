@@ -19,8 +19,8 @@ class UserRegistrationPage extends React.Component {
                     <div className="col-md-12">
                         <div className="row">
                             <div className="col-md-6 mx-auto">
-                                <Card classNames="rounded-0">
-                                    <CardHeader classNames="text-center">
+                                <Card className="rounded-0">
+                                    <CardHeader className="text-center">
                                         <h3>Sign Up</h3>
                                     </CardHeader>
                                     <CardBody>

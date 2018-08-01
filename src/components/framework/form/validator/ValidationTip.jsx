@@ -6,14 +6,14 @@ import PropTypes from "prop-types";
 
 export const ValidationTip = (props) => {
     return (
-        <Container classNames={props.classNames}>
-            <TimesCircleIcon classNames="mr-1" />
+        <Container className={props.className}>
+            <TimesCircleIcon className="mr-1" />
             <Message message={props.message} />
         </Container>
     );
 };
 
 ValidationTip.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     message: PropTypes.string
 };

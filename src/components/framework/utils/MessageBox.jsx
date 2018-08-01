@@ -4,13 +4,13 @@ import {Container} from "../layout/Container";
 
 export const MessageBox = (props) => {
     return (
-        <Container classNames={props.classNames}>
+        <Container className={props.className}>
             {props.children}
         </Container>
     );
 };
 
 MessageBox.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     children: PropTypes.any
 };

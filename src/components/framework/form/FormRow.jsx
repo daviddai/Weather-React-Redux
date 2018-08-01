@@ -4,7 +4,7 @@ import { Row } from "react-grid-system";
 
 export const FormRow = (props) => {
     return (
-        <Row className={props.classNames}>
+        <Row className={props.className}>
             {props.children}
         </Row>
     );

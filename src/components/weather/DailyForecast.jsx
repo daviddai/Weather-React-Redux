@@ -17,8 +17,8 @@ class DailyForecast extends React.Component {
         };
 
         return (
-            <Card classNames="border-0" styles={backgroundColor}>
-                <CardBody classNames="text-white text-center">
+            <Card className="border-0" style={backgroundColor}>
+                <CardBody className="text-white text-center">
                     <div>
                         <h6>Mon</h6>
                     </div>

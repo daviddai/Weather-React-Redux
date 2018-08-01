@@ -3,17 +3,17 @@ import PropTypes from "prop-types";
 
 export const Input = (props) => {
     const {
-        classNames,
+        className,
         ...otherProps
     } = props;
 
     return (
-        <input className={classNames} {...otherProps} />
+        <input className={className} {...otherProps} />
     );
 };
 
 Input.propTypes = {
     id: PropTypes.string,
     type: PropTypes.string,
-    classNames: PropTypes.string
+    className: PropTypes.string
 };

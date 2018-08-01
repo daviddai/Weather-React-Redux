@@ -3,8 +3,8 @@ import {InputGroup} from "../input/InputGroup";
 
 export const SearchGroup = () => {
     return (
-        <InputGroup btnClassNames="btn btn-outline-secondary"
-                    spanClassNames="fa fa-search"
+        <InputGroup btnclassName="btn btn-outline-secondary"
+                    spanclassName="fa fa-search"
         />
     );
 };

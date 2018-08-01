@@ -4,15 +4,15 @@ import {Container} from "../layout/Container";
 
 export const Card = (props) => {
     return (
-        <Container classNames={"card " + props.classNames} styles={props.styles}>
+        <Container className={"card " + props.className} style={props.style}>
             {props.children}
         </Container>
     );
 };
 
 Card.propTypes = {
-    classNames: PropTypes.string,
-    styles: PropTypes.object,
+    className: PropTypes.string,
+    style: PropTypes.object,
     children: PropTypes.any
 };
 

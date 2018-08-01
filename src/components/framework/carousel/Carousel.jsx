@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 
 export const Carousel = (props) => {
     return (
-        <Slider classNames={props.classNames} {...props.settings}>
+        <Slider className={props.className} {...props.settings}>
             {props.children}
         </Slider>
     );

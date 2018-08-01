@@ -28,13 +28,13 @@ class WeatherPage extends React.Component {
                 </div>
                 <div>
                     <Carousel setting={settings}>
-                        <Slide classNames="col-12 pl-4 pr-4">
+                        <Slide className="col-12 pl-4 pr-4">
                             <WeatherContainer/>
                         </Slide>
-                        <Slide classNames="col-12 pl-4 pr-4">
+                        <Slide className="col-12 pl-4 pr-4">
                             <WeatherContainer/>
                         </Slide>
-                        <Slide classNames="col-12 pl-4 pr-4">
+                        <Slide className="col-12 pl-4 pr-4">
                             <WeatherContainer/>
                         </Slide>
                     </Carousel>

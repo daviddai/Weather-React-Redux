@@ -14,11 +14,11 @@ class WeatherContainer extends React.Component {
         };
 
         return (
-            <Card classNames="rounded-0 border-0" styles={backgroundImage}>
+            <Card className="rounded-0 border-0" style={backgroundImage}>
                 <CardBody>
                     <TodaySection/>
                 </CardBody>
-                <CardFooter classNames="h-25 pt-2 border-top">
+                <CardFooter className="h-25 pt-2 border-top">
                     <ForecastSection/>
                 </CardFooter>
             </Card>

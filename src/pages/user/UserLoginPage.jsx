@@ -18,8 +18,8 @@ class UserLoginPage extends React.Component {
                     <div className="col-md-12">
                         <div className="row">
                             <div className="col-md-6 mx-auto">
-                                <Card classNames="rounded-0">
-                                    <CardHeader classNames="text-center">
+                                <Card className="rounded-0">
+                                    <CardHeader className="text-center">
                                         <h3>Sign In</h3>
                                     </CardHeader>
                                     <CardBody>

@@ -4,14 +4,14 @@ import {Container} from "../layout/Container";
 
 export const Slide = (props) => {
     return (
-        <Container classNames={props.classNames}>
+        <Container className={props.className}>
             {props.children}
         </Container>
     );
 };
 
 Slide.propTypes = {
-    classNames: PropTypes.string,
+    className: PropTypes.string,
     children: PropTypes.any
 };
 
