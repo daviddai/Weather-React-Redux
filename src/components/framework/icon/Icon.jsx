@@ -7,13 +7,19 @@ const Icon = (props) => {
 };
 
 export const SpinnerIcon = (props) => {
-    return <Icon classNames={"fa fa-spinner fa-spin fa-fw " + props.classNames} />;
+    return (
+        <Icon classNames={"fa fa-spinner fa-spin fa-fw " + props.classNames} />
+    );
 };
 
 export const TimesCircleIcon = (props) => {
-    return <Icon classNames={"fa fa-times-circle " + props.classNames} />;
+    return (
+        <Icon classNames={"fa fa-times-circle " + props.classNames} />
+    );
 };
 
 export const SearchIcon = (props) => {
-    return <Icon classNames={"fa fa-search " + props.classNames} />;
+    return (
+        <Icon classNames={"fa fa-search " + props.classNames} />
+    );
 };
