@@ -16,7 +16,7 @@ Container.propTypes = {
 };
 
 Container.defaultProps = {
-    className: "",
+    className: null,
     style: null,
     children: null
 };

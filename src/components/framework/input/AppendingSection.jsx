@@ -1,15 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 import {Container} from "../layout/Container";
+import PropTypes from "prop-types";
 
-export const InputGroup = (props) => {
+export const AppendingSection = (props) => {
     return (
-        <Container className="input-group">
+        <Container className="input-group-append">
             {props.children}
         </Container>
     );
 };
 
-InputGroup.propTypes = {
+AppendingSection.propTypes = {
     children: PropTypes.any
 };
