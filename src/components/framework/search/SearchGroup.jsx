@@ -1,6 +1,6 @@
 import React from "react";
-import {InputGroup} from "../input/InputGroup";
-import {AppendingSection} from "../input/AppendingSection";
+import {InputGroup} from "../form/input/input-group/InputGroup";
+import {AppendingSection} from "../form/input/input-group/AppendingSection";
 import {SearchIcon} from "../icon/Icon";
 import PropTypes from "prop-types";
 

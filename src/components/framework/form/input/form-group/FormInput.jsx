@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {ValidationTip} from "./validator/ValidationTip";
+import {ValidationTip} from "../../../info/ValidationTip";
 
-export const FormGroup = (props) => {
+export const FormInput = (props) => {
     return (
-        <div className="form-group">
+        <div>
             <label>{props.title}</label>
             <input id={props.id}
                    type={props.type}
@@ -20,9 +20,9 @@ export const FormGroup = (props) => {
     );
 };
 
-FormGroup.propTypes = {
-    id: PropTypes.string,
+FormInput.propTypes = {
     title: PropTypes.string,
+    id: PropTypes.string,
     type: PropTypes.string,
     onChange: PropTypes.func,
     hasError: PropTypes.bool,

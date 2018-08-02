@@ -1,15 +1,16 @@
 import React from "react";
-import {Form} from "../../framework/form/Form";
-import {FormRow} from "../../framework/form/FormRow";
-import {FormColumn} from "../../framework/form/FormColumn";
-import {FormGroup} from "../../framework/form/FormGroup";
+import {Form} from "../../framework/form/layout/Form";
+import {FormRow} from "../../framework/form/layout/FormRow";
+import {FormColumn} from "../../framework/form/layout/FormColumn";
+import {FormGroup} from "../../framework/form/input/form-group/FormGroup";
 import axios from "axios";
-import {MessageBox} from "../../framework/utils/MessageBox";
-import * as validators from "../../framework/form/validator/InputValidator";
+import {MessageBox} from "../../framework/info/MessageBox";
+import * as validators from "../../../utils/validator/InputValidator";
 import {SpinnerIcon, TimesCircleIcon} from "../../framework/icon/Icon";
 
 import "./user-login.css";
-import {Message} from "../../framework/utils/Message";
+import {Message} from "../../framework/info/Message";
+import {FormInput} from "../../framework/form/input/form-group/FormInput";
 
 class UserLoginForm extends React.Component {
 
@@ -101,24 +102,28 @@ class UserLoginForm extends React.Component {
 
                 <FormRow>
                     <FormColumn>
-                        <FormGroup id="email"
-                                   title="Email"
-                                   type="text"
-                                   hasError={this.state.statuses.email.touched && !this.state.statuses.email.valid}
-                                   errorMessage={this.state.statuses.email.errorMessage}
-                                   onChange={this.updateAndValidateLoginData}
-                        />
+                        <FormGroup>
+                            <FormInput id="email"
+                                       title="Email"
+                                       type="text"
+                                       hasError={this.state.statuses.email.touched && !this.state.statuses.email.valid}
+                                       errorMessage={this.state.statuses.email.errorMessage}
+                                       onChange={this.updateAndValidateLoginData}
+                            />
+                        </FormGroup>
                     </FormColumn>
                 </FormRow>
                 <FormRow>
                     <FormColumn>
-                        <FormGroup id="password"
-                                   title="Password"
-                                   type="password"
-                                   hasError={this.state.statuses.password.touched && !this.state.statuses.password.valid}
-                                   errorMessage={this.state.statuses.password.errorMessage}
-                                   onChange={this.updateAndValidateLoginData}
-                        />
+                        <FormGroup>
+                            <FormInput id="password"
+                                       title="Password"
+                                       type="password"
+                                       hasError={this.state.statuses.password.touched && !this.state.statuses.password.valid}
+                                       errorMessage={this.state.statuses.password.errorMessage}
+                                       onChange={this.updateAndValidateLoginData}
+                            />
+                        </FormGroup>
                     </FormColumn>
                 </FormRow>
                 <FormRow>

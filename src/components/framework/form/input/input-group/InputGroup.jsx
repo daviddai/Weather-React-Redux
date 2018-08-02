@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Container} from "../layout/Container";
+import {Container} from "../../../layout/Container";
 
 export const InputGroup = (props) => {
     return (
