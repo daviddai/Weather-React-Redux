@@ -13,5 +13,6 @@ export const Form = (props) => {
 };
 
 Form.propTypes = {
+    submitForm: PropTypes.func,
     children: PropTypes.any
 };

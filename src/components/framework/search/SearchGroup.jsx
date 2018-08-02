@@ -2,19 +2,26 @@ import React from "react";
 import {InputGroup} from "../input/InputGroup";
 import {AppendingSection} from "../input/AppendingSection";
 import {SearchIcon} from "../icon/Icon";
+import PropTypes from "prop-types";
 
-export const SearchGroup = () => {
+export const SearchGroup = (props) => {
     return (
-        <InputGroup btnclassName="btn btn-outline-secondary">
-            <input id="search"
-                   className="form-control"
+        <InputGroup>
+            <input className="form-control"
                    type="text"
+                   onChange={props.updateSearchTerm}
             />
             <AppendingSection>
-                <button className="btn btn-outline-secondary">
+                <button type="submit"
+                        className="btn btn-outline-secondary"
+                >
                     <SearchIcon/>
                 </button>
             </AppendingSection>
         </InputGroup>
     );
+};
+
+SearchGroup.propTypes = {
+    updateSearchTerm: PropTypes.func
 };

@@ -6,12 +6,31 @@ import {SearchGroup} from "../framework/search/SearchGroup";
 
 class AreaSearchForm extends React.Component {
 
+    constructor() {
+        super();
+
+        this.state = {
+            searchTerm: ''
+        };
+    }
+
+    search = (event) => {
+        event.preventDefault();
+        console.log("try to search");
+    };
+
+    updateSearchTerm = (event) => {
+        this.setState({
+           searchTerm: event.target.value
+        });
+    };
+
     render() {
         return (
-            <Form>
+            <Form submitForm={this.search}>
                 <FormRow>
                     <FormColumn>
-                        <SearchGroup/>
+                        <SearchGroup search={this.search} updateSearchTerm={this.updateSearchTerm} />
                     </FormColumn>
                 </FormRow>
             </Form>
