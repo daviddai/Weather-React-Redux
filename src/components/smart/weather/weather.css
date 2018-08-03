@@ -1,0 +1,12 @@
+.daily-forecast-background-color {
+    background-color: transparent;
+}
+
+.daily-forecast-weather-icon-size {
+    width: 100%;
+    height: 100%;
+}
+
+.today-weather-icon-size {
+    width: 40%;
+}

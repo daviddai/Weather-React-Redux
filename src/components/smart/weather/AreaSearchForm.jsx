@@ -1,8 +1,8 @@
 import React from "react";
-import {Form} from "../framework/form/layout/Form";
-import {FormRow} from "../framework/form/layout/FormRow";
-import {FormColumn} from "../framework/form/layout/FormColumn";
-import {SearchGroup} from "../framework/search/SearchGroup";
+import {Form} from "../../presentational/framework/form/layout/Form";
+import {FormRow} from "../../presentational/framework/form/layout/FormRow";
+import {FormColumn} from "../../presentational/framework/form/layout/FormColumn";
+import {SearchGroup} from "../../presentational/framework/search/SearchGroup";
 
 class AreaSearchForm extends React.Component {
 

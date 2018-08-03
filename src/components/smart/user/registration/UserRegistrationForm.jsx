@@ -1,9 +1,9 @@
 import React from "react";
-import {Form} from "../../framework/form/layout/Form";
-import {FormRow} from "../../framework/form/layout/FormRow";
-import {FormColumn} from "../../framework/form/layout/FormColumn";
-import {FormGroup} from "../../framework/form/input/form-group/FormGroup";
-import {FormInput} from "../../framework/form/input/form-group/FormInput";
+import {Form} from "../../../presentational/framework/form/layout/Form";
+import {FormRow} from "../../../presentational/framework/form/layout/FormRow";
+import {FormColumn} from "../../../presentational/framework/form/layout/FormColumn";
+import {FormGroup} from "../../../presentational/framework/form/input/form-group/FormGroup";
+import {FormInput} from "../../../presentational/framework/form/input/form-group/FormInput";
 
 class UserRegistrationForm extends React.Component {
 

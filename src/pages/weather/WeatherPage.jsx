@@ -1,8 +1,8 @@
 import React from "react";
-import {Carousel} from "../../components/framework/carousel/Carousel";
-import Slide from "../../components/framework/carousel/Slide";
-import WeatherContainer from "../../components/weather/WeatherContainer";
-import AreaSearch from "../../components/weather/AreaSearchForm";
+import {Carousel} from "../../components/presentational/framework/carousel/Carousel";
+import Slide from "../../components/presentational/framework/carousel/Slide";
+import WeatherContainer from "../../components/smart/weather/WeatherContainer";
+import AreaSearch from "../../components/smart/weather/AreaSearchForm";
 
 class WeatherPage extends React.Component {
 

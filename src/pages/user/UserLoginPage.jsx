@@ -1,8 +1,8 @@
 import React from "react";
-import UserLoginForm from "../../components/user/login/UserLoginForm";
-import CardBody from "../../components/framework/card/CardBody";
-import Card from "../../components/framework/card/Card";
-import CardHeader from "../../components/framework/card/CardHeader";
+import UserLoginForm from "../../components/smart/user/login/UserLoginForm";
+import CardBody from "../../components/presentational/framework/card/CardBody";
+import Card from "../../components/presentational/framework/card/Card";
+import CardHeader from "../../components/presentational/framework/card/CardHeader";
 
 class UserLoginPage extends React.Component {
 

@@ -1,10 +1,10 @@
 import React from "react";
-import images from "../../constants/ImagesRepo";
-import Card from "../framework/card/Card";
-import CardBody from "../framework/card/CardBody";
-import TodaySection from "./TodaySection";
-import CardFooter from "../framework/card/CardFooter";
-import ForecastSection from "./ForecastSection";
+import images from "../../../constants/ImagesRepo";
+import Card from "../../presentational/framework/card/Card";
+import CardBody from "../../presentational/framework/card/CardBody";
+import CardFooter from "../../presentational/framework/card/CardFooter";
+import {Forecasts} from "./Forecasts";
+import {Today} from "./Today";
 
 class WeatherContainer extends React.Component {
 
@@ -16,10 +16,12 @@ class WeatherContainer extends React.Component {
         return (
             <Card className="rounded-0 border-0" style={backgroundImage}>
                 <CardBody>
-                    <TodaySection/>
+                    <Today type="Sunny"
+                           temperture="18"
+                    />
                 </CardBody>
                 <CardFooter className="h-25 pt-2 border-top">
-                    <ForecastSection/>
+                    <Forecasts/>
                 </CardFooter>
             </Card>
         );
