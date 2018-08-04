@@ -7,31 +7,32 @@ import {WeatherForecasts} from "./WeatherForecasts";
 import {CurrentWeather} from "./CurrentWeather";
 import {CardHeader} from "../../presentational/framework/card/CardHeader";
 import {WeatherCity} from "./WeatherCity";
+import PropTypes from "prop-types";
 
-class Weather extends React.Component {
+export const Weather = (props) => {
+    const backgroundImage = {
+        backgroundImage: `url(${images.SYDNEY})`
+    };
 
-    render() {
-        const backgroundImage = {
-            backgroundImage: `url(${images.SYDNEY})`
-        };
+    return (
+        <Card className="rounded-0 border-0" style={backgroundImage}>
+            <CardHeader className="border-0 text-center">
+                <WeatherCity city={props.city}/>
+            </CardHeader>
+            <CardBody>
+                <CurrentWeather type={props.currentWeatherType}
+                                temperture={props.currentWeatherTemperture}
+                />
+            </CardBody>
+            <CardFooter className="border-top">
+                <WeatherForecasts/>
+            </CardFooter>
+        </Card>
+    );
+};
 
-        return (
-            <Card className="rounded-0 border-0" style={backgroundImage}>
-                <CardHeader className="border-0 text-center">
-                    <WeatherCity city="Sydney"/>
-                </CardHeader>
-                <CardBody>
-                    <CurrentWeather type="Sunny"
-                                    temperture="18"
-                    />
-                </CardBody>
-                <CardFooter className="border-top">
-                    <WeatherForecasts/>
-                </CardFooter>
-            </Card>
-        );
-    }
-
-}
-
-export default Weather;
+Weather.propTypes = {
+    city: PropTypes.string,
+    currentWeatherType: PropTypes.string,
+    currentWeatherTemperture: PropTypes.number
+};
