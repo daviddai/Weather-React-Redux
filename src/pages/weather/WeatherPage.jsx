@@ -14,21 +14,21 @@ class WeatherPage extends React.Component {
                     city: "Sydney",
                     today: {
                         currentWeatherType: "Sunny",
-                        currentWeatherTemperture: 18
+                        currentWeatherTemperature: 18
                     }
                 },
                 {
                     city: "Melbourne",
                     today: {
                         currentWeatherType: "Cool",
-                        currentWeatherTemperture: 15
+                        currentWeatherTemperature: 15
                     }
                 },
                 {
                     city: "Brisbane",
                     today: {
                         currentWeatherType: "Hot",
-                        currentWeatherTemperture: 28
+                        currentWeatherTemperature: 28
                     }
                 }
             ]
@@ -57,24 +57,18 @@ class WeatherPage extends React.Component {
                 </div>
                 <div>
                     <Carousel setting={settings}>
-                        <Slide className="col-12 pl-4 pr-4">
-                            <Weather city="Sydney"
-                                     currentWeatherType="Sunny"
-                                     currentWeatherTemperture="18"
-                            />
-                        </Slide>
-                        <Slide className="col-12 pl-4 pr-4">
-                            <Weather city="Melbourne"
-                                     currentWeatherType="Cold"
-                                     currentWeatherTemperture="15"
-                            />
-                        </Slide>
-                        <Slide className="col-12 pl-4 pr-4">
-                            <Weather city="Brisbane"
-                                     currentWeatherType="Hot"
-                                     currentWeatherTemperture="28"
-                            />
-                        </Slide>
+                        {
+                            this.state.weathers.map(weather => {
+                                return (
+                                    <Slide className="col-12 pl-4 pr-4">
+                                        <Weather city={weather.city}
+                                                 currentWeatherType={weather.today.currentWeatherType}
+                                                 currentWeatherTemperature={weather.today.currentWeatherTemperature}
+                                        />
+                                    </Slide>
+                                );
+                            })
+                        }
                     </Carousel>
                 </div>
             </div>

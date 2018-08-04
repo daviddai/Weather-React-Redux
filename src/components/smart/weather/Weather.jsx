@@ -21,7 +21,7 @@ export const Weather = (props) => {
             </CardHeader>
             <CardBody>
                 <CurrentWeather type={props.currentWeatherType}
-                                temperture={props.currentWeatherTemperture}
+                                temperture={props.currentWeatherTemperature}
                 />
             </CardBody>
             <CardFooter className="border-top">
@@ -34,5 +34,5 @@ export const Weather = (props) => {
 Weather.propTypes = {
     city: PropTypes.string,
     currentWeatherType: PropTypes.string,
-    currentWeatherTemperture: PropTypes.number
+    currentWeatherTemperature: PropTypes.number
 };
