@@ -1,17 +1,18 @@
 import React from "react";
 
 import images from "../../../constants/ImagesRepo";
+import {Heading} from "../../presentational/framework/heading/Heading";
 
-export const Today = (props) => {
+export const CurrentWeather = (props) => {
     return (
         <div>
-            <div className="text-center mt-4">
-                <h1 className="align-content-center font-weight-bold display-3 text-white">Sydney</h1>
-                <p className="pt-2 text-white font-weight-bold">
+            <div className="text-center">
+                <Heading headingTag="h4"
+                         className="text-white font-weight-bold">
                     {props.type}
-                </p>
+                </Heading>
             </div>
-            <div className="mt-4">
+            <div className="mt-5">
                 <img src={images.SUN} className="mx-auto today-weather-icon-size" />
             </div>
             <div className="text-center mt-4">

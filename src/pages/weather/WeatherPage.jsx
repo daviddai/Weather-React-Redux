@@ -1,7 +1,7 @@
 import React from "react";
 import {Carousel} from "../../components/presentational/framework/carousel/Carousel";
 import Slide from "../../components/presentational/framework/carousel/Slide";
-import WeatherContainer from "../../components/smart/weather/WeatherContainer";
+import Weather from "../../components/smart/weather/Weather";
 import AreaSearch from "../../components/smart/weather/AreaSearchForm";
 
 class WeatherPage extends React.Component {
@@ -29,13 +29,13 @@ class WeatherPage extends React.Component {
                 <div>
                     <Carousel setting={settings}>
                         <Slide className="col-12 pl-4 pr-4">
-                            <WeatherContainer/>
+                            <Weather/>
                         </Slide>
                         <Slide className="col-12 pl-4 pr-4">
-                            <WeatherContainer/>
+                            <Weather/>
                         </Slide>
                         <Slide className="col-12 pl-4 pr-4">
-                            <WeatherContainer/>
+                            <Weather/>
                         </Slide>
                     </Carousel>
                 </div>

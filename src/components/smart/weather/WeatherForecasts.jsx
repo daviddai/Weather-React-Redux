@@ -3,7 +3,7 @@ import React from "react";
 import {Row, Col} from "react-grid-system";
 import {DailyForecast} from "./DailyForecast";
 
-export const Forecasts = (props) => {
+export const WeatherForecasts = (props) => {
 
     return (
         <Row className="text-center text-white">

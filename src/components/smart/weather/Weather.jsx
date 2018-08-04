@@ -3,10 +3,12 @@ import images from "../../../constants/ImagesRepo";
 import Card from "../../presentational/framework/card/Card";
 import CardBody from "../../presentational/framework/card/CardBody";
 import CardFooter from "../../presentational/framework/card/CardFooter";
-import {Forecasts} from "./Forecasts";
-import {Today} from "./Today";
+import {WeatherForecasts} from "./WeatherForecasts";
+import {CurrentWeather} from "./CurrentWeather";
+import {CardHeader} from "../../presentational/framework/card/CardHeader";
+import {WeatherCity} from "./WeatherCity";
 
-class WeatherContainer extends React.Component {
+class Weather extends React.Component {
 
     render() {
         const backgroundImage = {
@@ -15,13 +17,16 @@ class WeatherContainer extends React.Component {
 
         return (
             <Card className="rounded-0 border-0" style={backgroundImage}>
+                <CardHeader className="border-0 text-center">
+                    <WeatherCity city="Sydney"/>
+                </CardHeader>
                 <CardBody>
-                    <Today type="Sunny"
-                           temperture="18"
+                    <CurrentWeather type="Sunny"
+                                    temperture="18"
                     />
                 </CardBody>
-                <CardFooter className="h-25 pt-2 border-top">
-                    <Forecasts/>
+                <CardFooter className="border-top">
+                    <WeatherForecasts/>
                 </CardFooter>
             </Card>
         );
@@ -29,4 +34,4 @@ class WeatherContainer extends React.Component {
 
 }
 
-export default WeatherContainer;
+export default Weather;

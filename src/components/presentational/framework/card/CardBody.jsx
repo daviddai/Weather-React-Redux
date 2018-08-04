@@ -14,4 +14,8 @@ CardBody.propTypes = {
     children: PropTypes.any
 };
 
+CardBody.defaultProps = {
+    className: ''
+}
+
 export default CardBody;
