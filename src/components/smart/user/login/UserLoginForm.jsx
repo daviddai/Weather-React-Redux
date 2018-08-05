@@ -6,7 +6,7 @@ import {FormGroup} from "../../../presentational/framework/form/input/form-group
 import axios from "axios";
 import {MessageBox} from "../../../presentational/framework/info/MessageBox";
 import * as validators from "../../../../utils/validator/InputValidator";
-import {SpinnerIcon, TimesCircleIcon} from "../../../presentational/framework/icon/Icon";
+import {SpinnerIcon, TimesCircleIcon} from "../../../presentational/framework/icon/font-awesome/FontAwesome";
 
 import "./user-login.css";
 import {Message} from "../../../presentational/framework/info/Message";

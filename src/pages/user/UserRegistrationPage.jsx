@@ -1,7 +1,7 @@
 import React from "react";
 import UserRegistrationForm from "../../components/smart/user/registration/UserRegistrationForm";
 import Card from "../../components/presentational/framework/card/Card";
-import CardHeader from "../../components/presentational/framework/card/CardHeader";
+import {CardHeader} from "../../components/presentational/framework/card/CardHeader";
 import CardBody from "../../components/presentational/framework/card/CardBody";
 
 class UserRegistrationPage extends React.Component {

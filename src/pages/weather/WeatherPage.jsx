@@ -11,6 +11,7 @@ class WeatherPage extends React.Component {
         this.state = {
             weathers: [
                 {
+                    cityId: 0,
                     city: "Sydney",
                     today: {
                         currentWeatherType: "Sunny",
@@ -18,6 +19,7 @@ class WeatherPage extends React.Component {
                     }
                 },
                 {
+                    cityId: 1,
                     city: "Melbourne",
                     today: {
                         currentWeatherType: "Cool",
@@ -25,6 +27,7 @@ class WeatherPage extends React.Component {
                     }
                 },
                 {
+                    cityId: 2,
                     city: "Brisbane",
                     today: {
                         currentWeatherType: "Hot",
@@ -60,7 +63,7 @@ class WeatherPage extends React.Component {
                         {
                             this.state.weathers.map(weather => {
                                 return (
-                                    <Slide className="col-12 pl-4 pr-4">
+                                    <Slide className="col-12 pl-4 pr-4" key={weather.cityId}>
                                         <Weather city={weather.city}
                                                  currentWeatherType={weather.today.currentWeatherType}
                                                  currentWeatherTemperature={weather.today.currentWeatherTemperature}
