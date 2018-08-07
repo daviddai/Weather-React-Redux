@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import images from "../../../constants/ImagesRepo";
+import CloudLightningRain from "../../../resources/svg/cloud-with-lightning-rain.svg";
 import Card from "../../presentational/framework/card/Card";
 import CardBody from "../../presentational/framework/card/CardBody";
 
@@ -15,8 +16,7 @@ export const DailyForecast = (props) => {
                     <h6>{props.day}</h6>
                 </div>
                 <div>
-                    <img src={images.STORM}
-                         className="daily-forecast-weather-icon-size" />
+                    <CloudLightningRain />
                 </div>
                 <div>
                     {props.temperature} &deg;C
@@ -25,4 +25,9 @@ export const DailyForecast = (props) => {
         </Card>
     );
 
+};
+
+DailyForecast.propTypes = {
+    day: PropTypes.string,
+    temperature: PropTypes.number
 };

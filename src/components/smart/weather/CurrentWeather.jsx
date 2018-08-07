@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import images from "../../../constants/ImagesRepo";
 import {Heading} from "../../presentational/framework/heading/Heading";
+import Sun from "../../../resources/svg/sun.svg";
 
 export const CurrentWeather = (props) => {
     return (
@@ -12,14 +13,19 @@ export const CurrentWeather = (props) => {
                     {props.type}
                 </Heading>
             </div>
-            <div className="mt-5">
-                <img src={images.SUN} className="mx-auto today-weather-icon-size" />
+            <div className="mt-5 mx-auto text-center text-white">
+                <Sun width="160" height="160" />
             </div>
             <div className="text-center mt-4">
                 <h3 className="align-content-center font-weight-bold text-white">
-                    Today {props.temperture} &deg;C
+                    Today {props.temperature} &deg;C
                 </h3>
             </div>
         </div>
     );
+};
+
+CurrentWeather.propTypes = {
+    type: PropTypes.string,
+    temperature: PropTypes.number
 };

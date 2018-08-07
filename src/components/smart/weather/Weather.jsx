@@ -21,7 +21,7 @@ export const Weather = (props) => {
             </CardHeader>
             <CardBody>
                 <CurrentWeather type={props.currentWeatherType}
-                                temperture={props.currentWeatherTemperature}
+                                temperature={props.currentWeatherTemperature}
                 />
             </CardBody>
             <CardFooter className="border-top">
