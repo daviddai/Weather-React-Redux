@@ -1,9 +1,20 @@
 import React from "react";
 
+import PropTypes from "prop-types";
+
 export const Icon = (props) => {
-    const IconType = props.iconType;
+    const {
+        IconType,
+        ...otherProps
+    } = props;
 
     return (
-        <IconType className={props.className} />
+        <IconType className={props.className}
+                  {...otherProps}
+        />
     );
+};
+
+Icon.propTyps = {
+    IconType: PropTypes.func.isRequired
 };

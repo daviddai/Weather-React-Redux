@@ -6,6 +6,7 @@ import "font-awesome/css/font-awesome.min.css";
 import UserLoginPage from "../pages/user/UserLoginPage";
 import UserRegistrationPage from "../pages/user/UserRegistrationPage";
 import WeatherPage from "../pages/weather/WeatherPage";
+import {PlayGround} from "../pages/sandbox/PlayGroud";
 
 class App extends React.Component {
 
@@ -16,6 +17,7 @@ class App extends React.Component {
                     <Route exact path ="/user/login" component={UserLoginPage} />
                     <Route exact path ="/user/register" component={UserRegistrationPage} />
                     <Route exact path="/weather" component={WeatherPage} />
+                    <Route exact path="/sandbox" component={PlayGround} />
                 </Switch>
             </Router>
         );

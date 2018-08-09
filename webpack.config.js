@@ -26,11 +26,17 @@ module.exports = {
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ]
             },
             {
-                test: /.(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(png|jpg|jpeg|gif|woff|woff2|eot|ttf)(\?v=\d+\.\d+\.\d+)?$/,
+                use: "file-loader"
+            },
+            {
+                test: /\.(svg)(\?v=\d+\.\d+\.\d+)?$/,
+                exclude: /src/,
                 use: "file-loader"
             },
             {
                 test: /\.svg$/,
+                exclude: /node_modules/,
                 use: ['babel-loader', {loader: 'react-svg-loader', options: {jsx: true}}]
             }
         ]
