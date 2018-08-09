@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import CloudLightningRain from "../../../resources/svg/cloud-with-lightning-rain.svg";
 import Card from "../../presentational/framework/card/Card";
 import CardBody from "../../presentational/framework/card/CardBody";
 
 import "./weather.css";
+import {CloudWithLightningRainIcon} from "../../presentational/framework/icon/svg/SvgIcons";
 
 export const DailyForecast = (props) => {
 
@@ -16,7 +16,7 @@ export const DailyForecast = (props) => {
                     <h6>{props.day}</h6>
                 </div>
                 <div>
-                    <CloudLightningRain />
+                    <CloudWithLightningRainIcon/>
                 </div>
                 <div>
                     {props.temperature} &deg;C

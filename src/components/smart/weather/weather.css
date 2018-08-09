@@ -7,6 +7,7 @@
     height: 100%;
 }
 
-.today-weather-icon-size {
-    width: 40%;
+.current-weather-type-svg-size {
+    width: 160px;
+    height: 160px;
 }
