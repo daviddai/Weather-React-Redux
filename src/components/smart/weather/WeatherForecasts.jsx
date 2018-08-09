@@ -9,22 +9,22 @@ export const WeatherForecasts = (props) => {
         <Row className="text-center text-white">
             <Col>
                 <DailyForecast day="Mon"
-                               temperature="18"
+                               temperature={18}
                 />
             </Col>
             <Col>
                 <DailyForecast day="Mon"
-                               temperature="18"
+                               temperature={18}
                 />
             </Col>
             <Col>
                 <DailyForecast day="Mon"
-                               temperature="18"
+                               temperature={18}
                 />
             </Col>
             <Col>
                 <DailyForecast day="Mon"
-                               temperature="18"
+                               temperature={18}
                 />
             </Col>
         </Row>

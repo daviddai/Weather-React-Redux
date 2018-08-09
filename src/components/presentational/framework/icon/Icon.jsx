@@ -1,7 +1,9 @@
 import React from "react";
 
 export const Icon = (props) => {
+    const IconType = props.iconType;
+
     return (
-        <i className={props.className} />
+        <IconType className={props.className} />
     );
 };

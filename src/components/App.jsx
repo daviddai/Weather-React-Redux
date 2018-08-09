@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import "bootstrap/dist/css/bootstrap.css";
-import "font-awesome/css/font-awesome.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "font-awesome/css/font-awesome.min.css";
 import UserLoginPage from "../pages/user/UserLoginPage";
 import UserRegistrationPage from "../pages/user/UserRegistrationPage";
 import WeatherPage from "../pages/weather/WeatherPage";
