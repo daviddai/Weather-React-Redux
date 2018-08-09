@@ -1,7 +1,7 @@
 import React from "react";
 import {InputGroup} from "../form/input/input-group/InputGroup";
 import {AppendingSection} from "../form/input/input-group/AppendingSection";
-import {SearchIcon} from "../icon/font-awesome/FontAwesome";
+import {SearchIcon} from "../icon/font-awesome/FontAwesomeIcons";
 import PropTypes from "prop-types";
 
 export const SearchGroup = (props) => {

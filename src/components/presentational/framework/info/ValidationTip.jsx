@@ -1,6 +1,6 @@
 import React from "react";
 import {Container} from "../layout/Container";
-import {TimesCircleIcon} from "../icon/font-awesome/FontAwesome";
+import {TimesCircleIcon} from "../icon/font-awesome/FontAwesomeIcons";
 import {Message} from "./Message";
 import PropTypes from "prop-types";
 
