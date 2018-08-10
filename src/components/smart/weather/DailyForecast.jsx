@@ -5,7 +5,7 @@ import Card from "../../presentational/framework/card/Card";
 import CardBody from "../../presentational/framework/card/CardBody";
 
 import "./weather.css";
-import {CloudWithLightningRainIcon} from "../../presentational/framework/icon/svg/SvgIcons";
+import {getWeatherTypeSvgIcon} from "../../presentational/framework/icon/svg/SvgIcons";
 
 export const DailyForecast = (props) => {
 
@@ -16,7 +16,9 @@ export const DailyForecast = (props) => {
                     <h6>{props.day}</h6>
                 </div>
                 <div>
-                    <CloudWithLightningRainIcon/>
+                    {
+                        getWeatherTypeSvgIcon(props.type)
+                    }
                 </div>
                 <div>
                     {props.temperature} &deg;C
@@ -29,5 +31,6 @@ export const DailyForecast = (props) => {
 
 DailyForecast.propTypes = {
     day: PropTypes.string,
+    type: PropTypes.number,
     temperature: PropTypes.number
 };

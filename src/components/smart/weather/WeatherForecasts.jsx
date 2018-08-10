@@ -10,21 +10,25 @@ export const WeatherForecasts = (props) => {
             <Col>
                 <DailyForecast day="Mon"
                                temperature={18}
+                               type={1}
                 />
             </Col>
             <Col>
                 <DailyForecast day="Mon"
                                temperature={18}
+                               type={1}
                 />
             </Col>
             <Col>
                 <DailyForecast day="Mon"
                                temperature={18}
+                               type={2}
                 />
             </Col>
             <Col>
                 <DailyForecast day="Mon"
                                temperature={18}
+                               type={2}
                 />
             </Col>
         </Row>

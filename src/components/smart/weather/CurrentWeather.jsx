@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import {Heading} from "../../presentational/framework/heading/Heading";
-import {SunIcon} from "../../presentational/framework/icon/svg/SvgIcons";
+import {getWeatherTypeSvgIcon} from "../../presentational/framework/icon/svg/SvgIcons";
 
 export const CurrentWeather = (props) => {
     return (
@@ -14,7 +14,9 @@ export const CurrentWeather = (props) => {
                 </Heading>
             </div>
             <div className="mt-5 mx-auto text-center text-white">
-                <SunIcon className="current-weather-type-svg-size" />
+                {
+                    getWeatherTypeSvgIcon(0, "current-weather-type-svg-size")
+                }
             </div>
             <div className="text-center mt-4">
                 <h3 className="align-content-center font-weight-bold text-white">
