@@ -40,7 +40,7 @@ class WeatherPage extends React.Component {
 
     render() {
         const containerStyle = {
-            maxWidth: "600px",
+            maxWidth: "85%",
             maxHeight: "700px"
         };
 

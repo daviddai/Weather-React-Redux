@@ -13,14 +13,14 @@ export const DailyForecast = (props) => {
         <Card className="border-0 daily-forecast-background-color">
             <CardBody className="text-white text-center">
                 <div>
-                    <h6>{props.day}</h6>
+                    <h6 className="daily-forecast-font-size daily-forecast-text-style">{props.day}</h6>
                 </div>
                 <div>
                     {
                         getWeatherTypeSvgIcon(props.type)
                     }
                 </div>
-                <div>
+                <div className="daily-forecast-font-size daily-forecast-text-style">
                     {props.temperature} &deg;C
                 </div>
             </CardBody>
