@@ -8,6 +8,7 @@ import {CurrentWeather} from "./CurrentWeather";
 import {CardHeader} from "../../presentational/framework/card/CardHeader";
 import {WeatherCity} from "./WeatherCity";
 import PropTypes from "prop-types";
+import {PlusCircleIcon} from "../../presentational/framework/icon/font-awesome/FontAwesomeIcons";
 
 export const Weather = (props) => {
     const backgroundImage = {
@@ -17,6 +18,7 @@ export const Weather = (props) => {
     return (
         <Card className="rounded-0 border-0" style={backgroundImage}>
             <CardHeader className="border-0 text-center">
+                <PlusCircleIcon className="fa-lg pull-right text-white"/>
                 <WeatherCity city={props.city}/>
             </CardHeader>
             <CardBody>

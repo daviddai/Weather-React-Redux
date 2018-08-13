@@ -19,6 +19,12 @@ export const SearchIcon = (props) => {
     );
 };
 
+export const PlusCircleIcon = (props) => {
+    return (
+        <Icon className={"fa fa-plus-circle " + props.className} IconType={buildAwesomeFontIcon} />
+    );
+};
+
 const buildAwesomeFontIcon = (props) => {
     return <i className={props.className} />
 };

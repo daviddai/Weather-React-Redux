@@ -55,15 +55,12 @@ class WeatherPage extends React.Component {
 
         return (
             <div className="container" style={containerStyle}>
-                <div className="col-12 mt-3 mb-1 pl-2 pr-2">
-                    <AreaSearch/>
-                </div>
-                <div>
+                <div className="mt-2">
                     <Carousel setting={settings}>
                         {
                             this.state.weathers.map(weather => {
                                 return (
-                                    <Slide className="col-12 pl-4 pr-4" key={weather.cityId}>
+                                    <Slide className="col-12 pl-1 pr-1" key={weather.cityId}>
                                         <Weather city={weather.city}
                                                  currentWeatherType={weather.today.currentWeatherType}
                                                  currentWeatherTemperature={weather.today.currentWeatherTemperature}
