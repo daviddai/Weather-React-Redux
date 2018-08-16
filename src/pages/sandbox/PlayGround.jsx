@@ -3,7 +3,7 @@ import {Container} from "../../components/presentational/framework/layout/Contai
 
 import "./playgroud.css";
 
-class PlayGroud extends React.Component {
+class PlayGround extends React.Component {
 
     constructor(props) {
         super(props);
@@ -38,4 +38,4 @@ class PlayGroud extends React.Component {
 
 }
 
-export default PlayGroud;
+export default PlayGround;
