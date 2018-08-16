@@ -6,7 +6,7 @@ import "font-awesome/css/font-awesome.min.css";
 import UserLoginPage from "../pages/user/UserLoginPage";
 import UserRegistrationPage from "../pages/user/UserRegistrationPage";
 import WeatherPage from "../pages/weather/WeatherPage";
-import PlayGround from "../pages/sandbox/PlayGround";
+import {PlayGround} from "../pages/sandbox/PlayGround";
 
 class App extends React.Component {
 
