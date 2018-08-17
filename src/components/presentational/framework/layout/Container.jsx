@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const Container = (props) => {
     return (
-        <div className={"container " + props.className} style={props.style}>
+        <div className={props.className} style={props.style}>
             {props.children}
         </div>
     );
