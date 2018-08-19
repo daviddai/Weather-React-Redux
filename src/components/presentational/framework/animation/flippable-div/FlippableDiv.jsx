@@ -1,5 +1,5 @@
 import React from "react";
-
+import ReactCardFlip from "react-card-flip";
 import "./flippale-div.css";
 
 class FlippableDiv extends React.Component {
@@ -8,25 +8,36 @@ class FlippableDiv extends React.Component {
         super(props);
 
         this.state = {
-            isToggled: false
+            isFlipped: false
         }
     }
 
-    flip = () => {
+    handleFlipping = () => {
         this.setState({
-            isToggled: !this.state.isToggled
-        });
+            isFlipped: !this.state.isFlipped
+        })
     };
 
     render() {
-        const flipped = this.state.isToggled ? "flipped" : "";
+        const childrenWithProps = React.Children.map(
+            this.props.children, (child, index) => {
+                if (child.key === 'front') {
+
+                } else if (child.key === 'back') {
+
+                }
+                console.log(child.key);
+            }
+        );
+
         return (
-            <div className={"flippable-div " + flipped} onClick={this.flip}>
+            <ReactCardFlip isFlipped={this.state.isFlipped}>
                 {this.props.children}
-            </div>
+            </ReactCardFlip>
         );
     }
 
 }
+
 
 export default FlippableDiv;

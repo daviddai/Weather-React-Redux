@@ -4,7 +4,7 @@ import "./flippale-div.css";
 
 export const Front = (props) => {
     return (
-        <div className={"front " + props.className }>
+        <div key={props.key} className={props.className}>
             {props.children}
         </div>
     );
