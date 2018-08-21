@@ -12,27 +12,25 @@ class FlippableDiv extends React.Component {
         }
     }
 
-    handleFlipping = () => {
+    flip = () => {
         this.setState({
             isFlipped: !this.state.isFlipped
         })
     };
 
     render() {
-        const childrenWithProps = React.Children.map(
-            this.props.children, (child, index) => {
-                if (child.key === 'front') {
+        const childrenWithProps = this.props.children.map(child => {
+            const extraProps = {
+                key: child.type.name === 'Front' ? 'front':'back',
+                triggerFlipping: this.flip
+            };
 
-                } else if (child.key === 'back') {
-
-                }
-                console.log(child.key);
-            }
-        );
+            return React.cloneElement(child, extraProps);
+        });
 
         return (
             <ReactCardFlip isFlipped={this.state.isFlipped}>
-                {this.props.children}
+                {childrenWithProps}
             </ReactCardFlip>
         );
     }

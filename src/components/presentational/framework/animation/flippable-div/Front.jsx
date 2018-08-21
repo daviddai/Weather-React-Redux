@@ -4,7 +4,7 @@ import "./flippale-div.css";
 
 export const Front = (props) => {
     return (
-        <div key={props.key} className={props.className}>
+        <div className={props.className} onClick={props.triggerFlipping}>
             {props.children}
         </div>
     );
