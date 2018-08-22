@@ -2,7 +2,6 @@ import React from "react";
 import {Carousel} from "../../components/presentational/framework/carousel/Carousel";
 import Slide from "../../components/presentational/framework/carousel/Slide";
 import {Weather} from "../../components/smart/weather/Weather";
-import AreaSearch from "../../components/smart/weather/AreaSearchForm";
 
 class WeatherPage extends React.Component {
     constructor(props) {

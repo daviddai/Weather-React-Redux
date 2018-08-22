@@ -1,6 +1,5 @@
 import React from "react";
 import ReactCardFlip from "react-card-flip";
-import "./flippale-div.css";
 
 class FlippableDiv extends React.Component {
 
